@@ -1,0 +1,360 @@
+Buil�ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0x1 (POWERON),boot:0xf (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x1820
+load:0x403cc710,len:0xbcc
+load:0x403ce710,len:0x2f5c
+entry 0x403cc71a
+[0;32mI (30) boot: ESP-IDF v5.3.3-dirty 2nd stage bootloader[0m
+[0;32mI (30) boot: compile time Feb  4 2026 10:26:26[0m
+[0;32mI (30) boot: chip revision: v0.4[0m
+[0;32mI (34) boot: efuse block revision: v1.3[0m
+[0;32mI (38) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (43) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (48) boot.esp32c3: SPI Flash Size : 2MB[0m
+[0;32mI (52) boot: Enabling RNG early entropy source...[0m
+[0;32mI (58) boot: Partition Table:[0m
+[0;32mI (61) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (69) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (76) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (84) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (91) boot: End of partition table[0m
+[0;32mI (95) esp_image: segment 0: paddr=00010020 vaddr=3c020020 size=0b87ch ( 47228) map[0m
+[0;32mI (111) esp_image: segment 1: paddr=0001b8a4 vaddr=3fc8d200 size=01384h (  4996) load[0m
+[0;32mI (113) esp_image: segment 2: paddr=0001cc30 vaddr=40380000 size=033e8h ( 13288) load[0m
+[0;32mI (123) esp_image: segment 3: paddr=00020020 vaddr=42000020 size=1dc10h (121872) map[0m
+[0;32mI (149) esp_image: segment 4: paddr=0003dc38 vaddr=403833e8 size=09d10h ( 40208) load[0m
+[0;32mI (160) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (160) boot: Disabling RNG early entropy source...[0m
+[0;32mI (172) cpu_start: Unicore app[0m
+[0;32mI (180) cpu_start: Pro cpu start user code[0m
+[0;32mI (181) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (181) app_init: Application information:[0m
+[0;32mI (183) app_init: Project name:     esp32c3_led_controller[0m
+[0;32mI (190) app_init: App version:      v5.3.3-dirty[0m
+[0;32mI (195) app_init: Compile time:     Feb  4 2026 10:23:35[0m
+[0;32mI (201) app_init: ELF file SHA256:  315bf3920...[0m
+[0;32mI (206) app_init: ESP-IDF:          v5.3.3-dirty[0m
+[0;32mI (212) efuse_init: Min chip rev:     v0.3[0m
+[0;32mI (216) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (221) efuse_init: Chip rev:         v0.4[0m
+[0;32mI (226) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (233) heap_init: At 3FC8FCC0 len 00030340 (192 KiB): RAM[0m
+[0;32mI (239) heap_init: At 3FCC0000 len 0001C710 (113 KiB): Retention RAM[0m
+[0;32mI (246) heap_init: At 3FCDC710 len 00002950 (10 KiB): Retention RAM[0m
+[0;32mI (253) heap_init: At 50000000 len 00001FE8 (7 KiB): RTCRAM[0m
+[0;32mI (261) spi_flash: detected chip: generic[0m
+[0;32mI (264) spi_flash: flash io: dio[0m
+[0;33mW (268) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (282) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (288) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (295) main_task: Started on CPU0[0m
+[0;32mI (305) main_task: Calling app_main()[0m
+[0;32mI (305) MAIN: ========================================[0m
+[0;32mI (305) MAIN: ESP32-C3 LED Controller with Buttons[0m
+[0;32mI (305) MAIN: ========================================
+[0m
+[0;32mI (315) MAIN: Initializing components...[0m
+[0;32mI (325) LED_CTRL: Initializing LED Controller...[0m
+[0;32mI (325) PWM_MGR: Initializing PWM Manager (ACTIVE-LOW LED)...[0m
+[0;32mI (335) PWM_MGR: PWM initialized on GPIO 0, Freq: 1000 Hz (ACTIVE-LOW)[0m
+[0;32mI (335) PWM_MGR: Note: This is for ACTIVE-LOW LED (LED ON when GPIO LOW)[0m
+[0;32mI (345) PWM_MGR: Set brightness immediate: 0% (duty: 1023, inverted for active-low)[0m
+[0;32mI (355) LED_CTRL: LED Controller initialized[0m
+[0;32mI (355) BTN_HDL: Initializing button handler...[0m
+[0;32mI (365) gpio: GPIO[4]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (375) gpio: GPIO[5]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (385) BTN_HDL: Button handler initialized[0m
+[0;32mI[0;32mI (395) UART: UART initialized - Baudrate: 115200, TX: GPIO21, RX: GPIO20[0m
+[0;32mI (405) BTN_HDL: Button UP callback registered[0m
+[0;32mI (405) BTN_HDL: Button DOWN callback registered[0m
+[0;32mI (405) MAIN: All components initialized successfully
+[0m
+
+========== LED STATUS ==========
+State: OFF
+Brightness: 0%
+Mode: PWM
+Fading: NO
+================================
+
+
+========== SYSTEM READY ==========
+Commands:
+  PWM Mode:  [0x55][0xAA][0x03][brightness 0-100][checksum]
+  ON/OFF:    [0x55][0xAA][0x01][0x00/0x01][checksum]
+==================================
+
+[0;32mI (445) MAIN: Timer started - 10ms interval[0m
+[0;32mI (1445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (2445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (3445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (4445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (5445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (6445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (7445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (8445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (9445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (10445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (11445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (12445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (13445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (14445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (15445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (16445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (17445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (18445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (19445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (20445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (21445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (22445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (23445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (24445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (25445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (26445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (27445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (28445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (29445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (30445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (31445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (32445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (33445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (34445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (35445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (36445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (37445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (38445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (39445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (40445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (41445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (42445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (43445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (44445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (45445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (46445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (47445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (48445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (49445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (50445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (51445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (52445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (53445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (54445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (55445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (56445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (57445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (58445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (59445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (60445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (61445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (62445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (63445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (64445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (65445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (66445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (67445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (68445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (69445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (70445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (71445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (72445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (73445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (74445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (75445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (76445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (77445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (78445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (79445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (80445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (81445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (82445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (83445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (84445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (85445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (86445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (87445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (88445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (89445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (90445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (91445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (92445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (93445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (94445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (95445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (96445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (97445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (98445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (99445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (100445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (101445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (102445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (103445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (104445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (105445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (106445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (107445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (108445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (109445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (110445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (111445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (112445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (113445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (114445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (115445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (116445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (117445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (118445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (119445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (120445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (121445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (122445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (123445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (124445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (125445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (126445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (127445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (128445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (129445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (130445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (131445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (132445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (133445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (134445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (135445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (136445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (137445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (138445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (139445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (140445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (141445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (142445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (143445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (144445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (145445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (146445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (147445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (148445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (149445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (150445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (151445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (152445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (153445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (154445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (155445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (156445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (157445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (158445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (159445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (160445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (161445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (162445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (163445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (164445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (165445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (166445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (167445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (168445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (169445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (170445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (171445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (172445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (173445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (174445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (175445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (176445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (177445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (178445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (179445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (180445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (181445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (182445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (183445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (184445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (185445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (186445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (187445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (188445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (189445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (190445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (191445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (192445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (193445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (194445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (195445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (196445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (197445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (198445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (199445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (200445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (201445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (202445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (203445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (204445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (205445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (206445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (207445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (208445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (209445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (210445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (211445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (212445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (213445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (214445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (215445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (216445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (217445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (218445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (219445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (220445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (221445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (222445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (223445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (224445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (225445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (226445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (227445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (228445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (229445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (230445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (231445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (232445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (233445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (234445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (235445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (236445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (237445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (238445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (239445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (240445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (241445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (242445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (243445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (244445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (245445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (246445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (247445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (248445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (249445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (250445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (251445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (252445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (253445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (254445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (255445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (256445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (257445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (258445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (259445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (260445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (261445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (262445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (263445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (264445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (265445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (266445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (267445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (268445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (269445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (270445) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m

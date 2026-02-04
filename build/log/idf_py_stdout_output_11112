@@ -1,0 +1,117 @@
+Build:�ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0x1 (POWERON),boot:0xc (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x1820
+load:0x403cc710,len:0xbcc
+load:0x403ce710,len:0x2f5c
+entry 0x403cc71a
+[0;32mI (30) boot: ESP-IDF v5.3.3-dirty 2nd stage bootloader[0m
+[0;32mI (30) boot: compile time Feb  4 2026 10:26:26[0m
+[0;32mI (30) boot: chip revision: v0.4[0m
+[0;32mI (34) boot: efuse block revision: v1.3[0m
+[0;32mI (38) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (43) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (48) boot.esp32c3: SPI Flash Size : 2MB[0m
+[0;32mI (52) boot: Enabling RNG early entropy source...[0m
+[0;32mI (58) boot: Partition Table:[0m
+[0;32mI (61) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (69) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (76) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (84) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (91) boot: End of partition table[0m
+[0;32mI (95) esp_image: segment 0: paddr=00010020 vaddr=3c020020 size=0b7ech ( 47084) map[0m
+[0;32mI (111) esp_image: segment 1: paddr=0001b814 vaddr=3fc8d200 size=01384h (  4996) load[0m
+[0;32mI (113) esp_image: segment 2: paddr=0001cba0 vaddr=40380000 size=03478h ( 13432) load[0m
+[0;32mI (123) esp_image: segment 3: paddr=00020020 vaddr=42000020 size=1dbdch (121820) map[0m
+[0;32mI (149) esp_image: segment 4: paddr=0003dc04 vaddr=40383478 size=09c80h ( 40064) load[0m
+[0;32mI (160) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (160) boot: Disabling RNG early entropy source...[0m
+[0;32mI (172) cpu_start: Unicore app[0m
+[0;32mI (180) cpu_start: Pro cpu start user code[0m
+[0;32mI (180) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (181) app_init: Application information:[0m
+[0;32mI (183) app_init: Project name:     esp32c3_led_controller[0m
+[0;32mI (190) app_init: App version:      v5.3.3-dirty[0m
+[0;32mI (195) app_init: Compile time:     Feb  4 2026 10:23:35[0m
+[0;32mI (201) app_init: ELF file SHA256:  6cee90a79...[0m
+[0;32mI (206) app_init: ESP-IDF:          v5.3.3-dirty[0m
+[0;32mI (211) efuse_init: Min chip rev:     v0.3[0m
+[0;32mI (216) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (221) efuse_init: Chip rev:         v0.4[0m
+[0;32mI (226) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (233) heap_init: At 3FC8FCC0 len 00030340 (192 KiB): RAM[0m
+[0;32mI (239) heap_init: At 3FCC0000 len 0001C710 (113 KiB): Retention RAM[0m
+[0;32mI (246) heap_init: At 3FCDC710 len 00002950 (10 KiB): Retention RAM[0m
+[0;32mI (253) heap_init: At 50000000 len 00001FE8 (7 KiB): RTCRAM[0m
+[0;32mI (260) spi_flash: detected chip: generic[0m
+[0;32mI (264) spi_flash: flash io: dio[0m
+[0;33mW (268) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (281) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (288) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (295) main_task: Started on CPU0[0m
+[0;32mI (305) main_task: Calling app_main()[0m
+[0;32mI (305) MAIN: ========================================[0m
+[0;32mI (305) MAIN: ESP32-C3 LED Controller with Buttons[0m
+[0;32mI (305) MAIN: ========================================
+[0m
+[0;32mI (315) MAIN: Initializing components...[0m
+[0;32mI (325) LED_CTRL: Initializing LED Controller...[0m
+[0;32mI (325) PWM_MGR: Initializing PWM Manager...[0m
+[0;32mI (335) PWM_MGR: PWM initialized on GPIO 0, Freq: 1000 Hz[0m
+[0;32mI (335) PWM_MGR: Set brightness immediate: 0% (duty: 0)[0m
+[0;32mI (345) LED_CTRL: LED Controller initialized[0m
+[0;32mI (345) BTN_HDL: Initializing button handler...[0m
+[0;32mI (355) gpio: GPIO[4]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (365) gpio: GPIO[5]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (375) BTN_HDL: Button handler initialized[0m
+[0;32mI[0;32mI (385) UART: UART initialized - Baudrate: 115200, TX: GPIO21, RX: GPIO20[0m
+[0;32mI (385) BTN_HDL: Button UP callback registered[0m
+[0;32mI (385) BTN_HDL: Button DOWN callback registered[0m
+[0;32mI (395) MAIN: All components initialized successfully
+[0m
+
+========== LED STATUS ==========
+State: OFF
+Brightness: 0%
+Mode: PWM
+Fading: NO
+================================
+
+
+========== SYSTEM READY ==========
+Commands:
+  PWM Mode:  [0x55][0xAA][0x03][brightness 0-100][checksum]
+  ON/OFF:    [0x55][0xAA][0x01][0x00/0x01][checksum]
+==================================
+
+[0;32mI (425) MAIN: Timer started - 10ms interval[0m
+[0;32mI (1425) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (2425) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (3425) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (4425) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (5425) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (6425) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (7425) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (8425) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (9425) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (10425) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (11425) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (12425) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (13425) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (14425) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (15425) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (16425) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (17425) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (18425) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (19425) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (20425) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (21425) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (22425) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (23425) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (24425) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (25425) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (1425) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (2425) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (3425) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m

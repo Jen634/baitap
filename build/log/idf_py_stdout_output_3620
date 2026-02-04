@@ -1,0 +1,17 @@
+[1/9] Performing build step for 'bootloader'
+[1/1] C:\Windows\system32\cmd.exe /C "cd /D C:\Espressif\frameworks\esp-idf-v5.3.3\examples\get-started\esp32c3_led_controller\esp32c3_led_controller\build\bootloader\esp-idf\esptool_py && C:\Espressif\python_env\idf5.3_py3.11_env\Scripts\python.exe C:/Espressif/frameworks/esp-idf-v5.3.3/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 C:/Espressif/frameworks/esp-idf-v5.3.3/examples/get-started/esp32c3_led_controller/esp32c3_led_controller/build/bootloader/bootloader.bin"
+Bootloader binary size 0x53a0 bytes. 0x2c60 bytes (35%) free.
+[2/9] No install step for 'bootloader'
+[3/9] Completed 'bootloader'
+[4/9] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/uart_protocol.c.obj
+[5/9] Linking C static library esp-idf\main\libmain.a
+[6/9] Generating ld/sections.ld
+[7/9] Linking CXX executable esp32c3_led_controller.elf
+[8/9] Generating binary image from built executable
+esptool.py v4.10.0
+Creating esp32c3 image...
+Merged 1 ELF section
+Successfully created esp32c3 image.
+Generated C:/Espressif/frameworks/esp-idf-v5.3.3/examples/get-started/esp32c3_led_controller/esp32c3_led_controller/build/esp32c3_led_controller.bin
+[9/9] C:\Windows\system32\cmd.exe /C "cd /D C:\Espressif\frameworks\esp-idf-v5.3.3\examples\get-started\esp32c3_led_controller\esp32c3_led_controller\build\esp-idf\esptool_py && C:\Espressif\python_env\idf5.3_py3.11_env\Scripts\python.exe C:/Espressif/frameworks/esp-idf-v5.3.3/components/partition_table/check_sizes.py --offset 0x8000 partition --type app C:/Espressif/frameworks/esp-idf-v5.3.3/examples/get-started/esp32c3_led_controller/esp32c3_led_controller/build/partition_table/partition-table.bin C:/Espressif/frameworks/esp-idf-v5.3.3/examples/get-started/esp32c3_led_controller/esp32c3_led_controller/build/esp32c3_led_controller.bin"
+esp32c3_led_controller.bin binary size 0x37ab0 bytes. Smallest app partition is 0x100000 bytes. 0xc8550 bytes (78%) free.

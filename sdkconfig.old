@@ -1,0 +1,51 @@
+#
+# Automatically generated file; DO NOT EDIT.
+# Espressif IoT Development Framework Configuration
+#
+
+#
+# SDK Tool configuration
+#
+CONFIG_SDK_TOOLPREFIX="xtensa-esp32c3-elf-"
+
+#
+# Application manager
+#
+CONFIG_APP_COMPILE_TIME_DATE=y
+
+#
+# Bootloader config
+#
+CONFIG_BOOTLOADER_OFFSET_IN_FLASH=0x0
+CONFIG_BOOTLOADER_SKIP_VALIDATE_IN_DEEP_SLEEP=y
+CONFIG_BOOTLOADER_SKIP_VALIDATE_ALWAYS=n
+CONFIG_BOOTLOADER_SKIP_VALIDATE_ON_POWER_ON=n
+
+#
+# Partition Table config
+#
+CONFIG_PARTITION_TABLE_SINGLE_APP=y
+CONFIG_PARTITION_TABLE_SINGLE_APP_SIZE=0x140000
+
+#
+# UART for console output
+#
+CONFIG_ESP_CONSOLE_UART_DEFAULT=y
+CONFIG_ESP_CONSOLE_UART_BAUDRATE=115200
+
+#
+# CPU specific settings
+#
+CONFIG_IDF_TARGET="esp32c3"
+CONFIG_IDF_FIRMWARE_CHIP_ID=0x0005
+
+#
+# Main XTAL frequency
+#
+CONFIG_XTAL_FREQ_40=y
+CONFIG_XTAL_FREQ=40
+
+#
+# Component config
+#
+CONFIG_FREERTOS_UNICORE=y

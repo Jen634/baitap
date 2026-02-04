@@ -1,0 +1,1519 @@
+Build�ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0x1 (POWERON),boot:0xe (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x1820
+load:0x403cc710,len:0xbcc
+load:0x403ce710,len:0x2f5c
+entry 0x403cc71a
+[0;32mI (30) boot: ESP-IDF v5.3.3-dirty 2nd stage bootloader[0m
+[0;32mI (30) boot: compile time Feb  4 2026 10:26:26[0m
+[0;32mI (30) boot: chip revision: v0.4[0m
+[0;32mI (34) boot: efuse block revision: v1.3[0m
+[0;32mI (38) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (43) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (48) boot.esp32c3: SPI Flash Size : 2MB[0m
+[0;32mI (52) boot: Enabling RNG early entropy source...[0m
+[0;32mI (58) boot: Partition Table:[0m
+[0;32mI (61) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (69) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (76) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (84) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (91) boot: End of partition table[0m
+[0;32mI (95) esp_image: segment 0: paddr=00010020 vaddr=3c020020 size=0b94ch ( 47436) map[0m
+[0;32mI (111) esp_image: segment 1: paddr=0001b974 vaddr=3fc8d200 size=01384h (  4996) load[0m
+[0;32mI (113) esp_image: segment 2: paddr=0001cd00 vaddr=40380000 size=03318h ( 13080) load[0m
+[0;32mI (123) esp_image: segment 3: paddr=00020020 vaddr=42000020 size=1dc80h (121984) map[0m
+[0;32mI (149) esp_image: segment 4: paddr=0003dca8 vaddr=40383318 size=09de0h ( 40416) load[0m
+[0;32mI (160) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (160) boot: Disabling RNG early entropy source...[0m
+[0;32mI (172) cpu_start: Unicore app[0m
+[0;32mI (181) cpu_start: Pro cpu start user code[0m
+[0;32mI (181) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (181) app_init: Application information:[0m
+[0;32mI (184) app_init: Project name:     esp32c3_led_controller[0m
+[0;32mI (190) app_init: App version:      v5.3.3-dirty[0m
+[0;32mI (195) app_init: Compile time:     Feb  4 2026 10:23:35[0m
+[0;32mI (201) app_init: ELF file SHA256:  bd281aa39...[0m
+[0;32mI (206) app_init: ESP-IDF:          v5.3.3-dirty[0m
+[0;32mI (212) efuse_init: Min chip rev:     v0.3[0m
+[0;32mI (216) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (221) efuse_init: Chip rev:         v0.4[0m
+[0;32mI (226) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (233) heap_init: At 3FC8FCC0 len 00030340 (192 KiB): RAM[0m
+[0;32mI (239) heap_init: At 3FCC0000 len 0001C710 (113 KiB): Retention RAM[0m
+[0;32mI (246) heap_init: At 3FCDC710 len 00002950 (10 KiB): Retention RAM[0m
+[0;32mI (253) heap_init: At 50000000 len 00001FE8 (7 KiB): RTCRAM[0m
+[0;32mI (261) spi_flash: detected chip: generic[0m
+[0;32mI (264) spi_flash: flash io: dio[0m
+[0;33mW (268) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (282) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (288) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (296) main_task: Started on CPU0[0m
+[0;32mI (306) main_task: Calling app_main()[0m
+[0;32mI (306) MAIN: ========================================[0m
+[0;32mI (306) MAIN: ESP32-C3 LED Controller with Buttons[0m
+[0;32mI (306) MAIN: ========================================
+[0m
+[0;32mI (316) MAIN: Initializing components...[0m
+[0;32mI (326) LED_CTRL: Initializing LED Controller...[0m
+[0;32mI (326) PWM_MGR: Initializing PWM Manager (ACTIVE-LOW LED)...[0m
+[0;32mI (336) PWM_MGR: PWM initialized on GPIO 0, Freq: 1000 Hz (ACTIVE-LOW)[0m
+[0;32mI (336) PWM_MGR: Note: This is for ACTIVE-LOW LED (LED ON when GPIO LOW)[0m
+[0;32mI (346) PWM_MGR: Set brightness immediate: 0% (duty: 1023, inverted for active-low)[0m
+[0;32mI (356) LED_CTRL: LED Controller initialized[0m
+[0;32mI (356) BTN_HDL: Initializing button handler...[0m
+[0;32mI (366) gpio: GPIO[4]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (376) gpio: GPIO[5]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (386) BTN_HDL: Button handler initialized[0m
+[0;32mI[0;32mI (396) UART: UART initialized - Baudrate: 115200, TX: GPIO1, RX: GPIO3[0m
+[0;32mI (406) BTN_HDL: Button UP callback registered[0m
+[0;32mI (406) BTN_HDL: Button DOWN callback registered[0m
+[0;32mI (406) MAIN: All components initialized successfully
+[0m
+
+========== LED STATUS ==========
+State: OFF
+Brightness: 0%
+Mode: PWM
+Fading: NO
+================================
+
+
+========== SYSTEM READY ==========
+Commands:
+  PWM Mode:  [0x55][0xAA][0x03][brightness 0-100][checksum]
+  ON/OFF:    [0x55][0xAA][0x01][0x00/0x01][checksum]
+==================================
+
+[0;32mI (446) MAIN: Timer started - 10ms interval[0m
+[0;32mI (1446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (2446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (3446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (4446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (5446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (6446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[RX] 0x55 [RX] 0xAA [RX] 0x01 [RX] 0x01 [RX] 0xFF 
+[FRAME] H1=0x55 H2=0xAA CMD=0x01 VAL=0x01 CRC=0xFF
+[CHECK] Expected CRC=0xFF, Got CRC=0xFF → OK
+[0;32mI (6696) UART: Valid frame received[0m
+[0;32mI (6696) UART: Processing valid frame - CMD: 0x01, Value: 0x01[0m
+[OK] ON LED
+[0;32mI (6706) PWM_MGR: Start fading to brightness: 100% (current: 0%)[0m
+[0;32mI (6716) LED_CTRL: Set LED ON via UART[0m
+[ACK] CMD=0x01, Value=0x01, Checksum=0xFF
+[0;32mI (6726) UART: ACK sent: CMD=0x01[0m
+[0;32mI (7446) MAIN: LED Status - On: YES, Brightness: 25%, Fading: YES[0m
+[0;32mI (8446) MAIN: LED Status - On: YES, Brightness: 58%, Fading: YES[0m
+[0;32mI (9446) MAIN: LED Status - On: YES, Brightness: 92%, Fading: YES[0m
+[RX] 0x55 [RX] 0xAA [RX] 0x01 [RX] 0x00 [RX] 0xFE 
+[FRAME] H1=0x55 H2=0xAA CMD=0x01 VAL=0x00 CRC=0xFE
+[CHECK] Expected CRC=0xFE, Got CRC=0xFE → OK
+[0;32mI (9546) UART: Valid frame received[0m
+[0;32mI (9546) UART: Processing valid frame - CMD: 0x01, Value: 0x00[0m
+[OK] OFF LED
+[0;32mI (9556) PWM_MGR: Start fading to brightness: 0% (current: 95%)[0m
+[0;32mI (9566) LED_CTRL: Set LED OFF via UART[0m
+[ACK] CMD=0x01, Value=0x00, Checksum=0xFE
+[0;32mI (9576) UART: ACK sent: CMD=0x01[0m
+[0;32mI (10446) MAIN: LED Status - On: NO, Brightness: 65%, Fading: YES[0m
+[0;32mI (11446) MAIN: LED Status - On: NO, Brightness: 32%, Fading: YES[0m
+[0;32mI (12446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (13446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (14446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (15446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (16446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (17446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (18446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (19446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (20446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (21446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (22446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (23446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (24446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (25446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (26446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (27446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (28446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (29446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (30446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (31446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (32446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (33446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (34446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (35446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (36446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (37446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (38446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (39446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (40446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (41446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (42446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (43446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (44446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (45446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (46446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (47446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (48446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (49446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (50446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (51446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (52446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (53446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (54446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (55446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (56446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (57446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (58446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (59446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (60446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (61446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (62446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (63446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (64446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (65446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (66446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (67446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (68446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (69446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (70446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (71446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (72446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (73446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (74446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (75446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (76446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (77446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (78446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (79446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (80446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (81446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (82446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (83446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (84446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (85446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (86446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (87446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (88446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (89446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (90446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (91446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (92446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (93446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (94446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (95446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (96446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (97446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (98446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (99446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (100446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (101446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (102446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (103446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (104446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (105446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (106446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (107446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (108446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (109446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (110446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (111446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (112446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (113446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (114446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (115446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (116446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (117446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (118446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (119446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (120446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (121446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (122446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (123446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (124446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (125446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (126446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (127446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (128446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (129446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (130446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (131446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (132446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (133446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (134446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (135446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (136446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (137446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (138446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (139446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (140446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (141446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (142446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (143446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (144446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (145446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (146446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (147446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (148446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (149446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (150446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (151446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (152446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (153446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (154446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (155446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (156446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (157446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (158446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (159446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (160446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (161446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (162446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (163446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (164446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (165446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (166446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (167446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (168446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (169446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (170446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (171446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (172446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (173446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (174446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (175446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (176446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (177446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (178446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (179446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (180446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (181446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (182446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (183446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (184446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (185446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (186446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (187446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (188446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (189446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (190446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (191446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (192446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (193446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (194446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (195446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (196446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (197446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (198446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (199446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (200446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (201446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (202446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (203446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (204446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (205446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (206446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (207446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (208446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (209446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (210446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (211446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (212446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (213446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (214446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (215446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (216446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (217446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (218446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (219446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (220446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (221446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (222446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (223446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (224446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (225446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (226446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (227446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (228446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (229446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (230446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (231446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (232446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (233446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (234446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (235446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (236446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (237446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (238446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (239446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (240446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (241446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (242446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (243446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (244446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (245446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (246446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (247446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (248446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (249446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (250446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (251446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (252446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (253446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (254446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (255446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (256446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (257446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (258446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (259446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (260446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (261446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (262446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (263446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (264446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (265446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (266446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (267446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (268446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (269446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (270446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (271446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (272446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (273446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (274446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (275446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (276446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (277446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (278446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (279446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (280446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (281446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (282446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (283446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (284446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (285446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (286446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (287446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (288446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (289446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (290446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (291446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (292446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (293446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (294446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (295446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (296446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (297446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (298446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (299446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (300446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (301446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (302446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (303446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (304446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (305446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (306446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (307446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (308446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (309446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (310446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (311446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (312446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (313446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (314446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (315446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (316446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (317446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (318446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (319446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (320446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (321446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (322446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (323446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (324446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (325446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (326446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (327446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (328446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (329446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (330446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (331446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (332446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (333446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (334446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (335446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (336446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (337446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (338446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (339446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (340446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (341446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (342446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (343446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (344446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (345446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (346446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (347446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (348446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (349446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (350446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (351446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (352446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (353446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (354446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (355446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (356446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (357446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (358446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (359446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (360446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (361446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (362446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (363446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (364446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (365446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (366446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (367446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (368446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (369446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (370446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (371446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (372446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (373446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (374446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (375446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (376446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (377446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (378446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (379446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (380446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (381446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (382446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (383446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (384446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (385446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (386446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (387446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (388446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (389446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (390446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (391446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (392446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (393446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (394446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (395446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (396446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (397446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (398446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (399446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (400446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (401446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (402446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (403446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (404446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (405446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (406446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (407446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (408446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (409446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (410446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (411446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (412446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (413446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (414446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[RX] 0x55 [RX] 0xAA [RX] 0x01 [RX] 0x01 [RX] 0xFF 
+[FRAME] H1=0x55 H2=0xAA CMD=0x01 VAL=0x01 CRC=0xFF
+[CHECK] Expected CRC=0xFF, Got CRC=0xFF → OK
+[0;32mI (415346) UART: Valid frame received[0m
+[0;32mI (415346) UART: Processing valid frame - CMD: 0x01, Value: 0x01[0m
+[OK] ON LED
+[0;32mI (415356) PWM_MGR: Start fading to brightness: 100% (current: 0%)[0m
+[0;32mI (415366) LED_CTRL: Set LED ON via UART[0m
+[ACK] CMD=0x01, Value=0x01, Checksum=0xFF
+[0;32mI (415376) UART: ACK sent: CMD=0x01[0m
+[0;32mI (415446) MAIN: LED Status - On: YES, Brightness: 3%, Fading: YES[0m
+[0;32mI (416446) MAIN: LED Status - On: YES, Brightness: 36%, Fading: YES[0m
+[0;32mI (417446) MAIN: LED Status - On: YES, Brightness: 70%, Fading: YES[0m
+[0;32mI (418446) MAIN: LED Status - On: YES, Brightness: 100%, Fading: NO[0m
+[0;32mI (419446) MAIN: LED Status - On: YES, Brightness: 100%, Fading: NO[0m
+[0;32mI (420446) MAIN: LED Status - On: YES, Brightness: 100%, Fading: NO[0m
+[0;32mI (421446) MAIN: LED Status - On: YES, Brightness: 100%, Fading: NO[0m
+[0;32mI (422446) MAIN: LED Status - On: YES, Brightness: 100%, Fading: NO[0m
+[0;32mI (423446) MAIN: LED Status - On: YES, Brightness: 100%, Fading: NO[0m
+[0;32mI (424446) MAIN: LED Status - On: YES, Brightness: 100%, Fading: NO[0m
+[0;32mI (425446) MAIN: LED Status - On: YES, Brightness: 100%, Fading: NO[0m
+[0;32mI (426446) MAIN: LED Status - On: YES, Brightness: 100%, Fading: NO[0m
+[0;32mI (427446) MAIN: LED Status - On: YES, Brightness: 100%, Fading: NO[0m
+[0;32mI (428446) MAIN: LED Status - On: YES, Brightness: 100%, Fading: NO[0m
+[0;32mI (429446) MAIN: LED Status - On: YES, Brightness: 100%, Fading: NO[0m
+[0;32mI (430446) MAIN: LED Status - On: YES, Brightness: 100%, Fading: NO[0m
+[0;32mI (431446) MAIN: LED Status - On: YES, Brightness: 100%, Fading: NO[0m
+[0;32mI (432446) MAIN: LED Status - On: YES, Brightness: 100%, Fading: NO[0m
+[0;32mI (433446) MAIN: LED Status - On: YES, Brightness: 100%, Fading: NO[0m
+[0;32mI (434446) MAIN: LED Status - On: YES, Brightness: 100%, Fading: NO[0m
+[0;32mI (435446) MAIN: LED Status - On: YES, Brightness: 100%, Fading: NO[0m
+[0;32mI (436446) MAIN: LED Status - On: YES, Brightness: 100%, Fading: NO[0m
+[0;32mI (437446) MAIN: LED Status - On: YES, Brightness: 100%, Fading: NO[0m
+[0;32mI (438446) MAIN: LED Status - On: YES, Brightness: 100%, Fading: NO[0m
+[0;32mI (439446) MAIN: LED Status - On: YES, Brightness: 100%, Fading: NO[0m
+[0;32mI (440446) MAIN: LED Status - On: YES, Brightness: 100%, Fading: NO[0m
+[0;32mI (441446) MAIN: LED Status - On: YES, Brightness: 100%, Fading: NO[0m
+[0;32mI (442446) MAIN: LED Status - On: YES, Brightness: 100%, Fading: NO[0m
+[0;32mI (443446) MAIN: LED Status - On: YES, Brightness: 100%, Fading: NO[0m
+[0;32mI (444446) MAIN: LED Status - On: YES, Brightness: 100%, Fading: NO[0m
+[0;32mI (445446) MAIN: LED Status - On: YES, Brightness: 100%, Fading: NO[0m
+[0;32mI (446446) MAIN: LED Status - On: YES, Brightness: 100%, Fading: NO[0m
+[0;32mI (447446) MAIN: LED Status - On: YES, Brightness: 100%, Fading: NO[0m
+[0;32mI (448446) MAIN: LED Status - On: YES, Brightness: 100%, Fading: NO[0m
+[0;32mI (449446) MAIN: LED Status - On: YES, Brightness: 100%, Fading: NO[0m
+[0;32mI (450446) MAIN: LED Status - On: YES, Brightness: 100%, Fading: NO[0m
+[0;32mI (451266) MAIN: Button DOWN - Single press detected[0m
+[0;32mI (451266) PWM_MGR: Start fading to brightness: 99% (current: 100%)[0m
+[0;32mI (451266) LED_CTRL: Decrease brightness: 99%[0m
+[0;32mI (451266) BTN_HDL: Button GPIO 5 pressed[0m
+[0;32mI (451446) MAIN: LED Status - On: YES, Brightness: 99%, Fading: NO[0m
+[0;32mI (451546) MAIN: Button DOWN - Released[0m
+[0;32mI (451546) BTN_HDL: Button GPIO 5 released[0m
+[0;32mI (452446) MAIN: LED Status - On: YES, Brightness: 99%, Fading: NO[0m
+[0;32mI (453446) MAIN: LED Status - On: YES, Brightness: 99%, Fading: NO[0m
+[0;32mI (453736) MAIN: Button DOWN - Single press detected[0m
+[0;32mI (453736) PWM_MGR: Start fading to brightness: 98% (current: 99%)[0m
+[0;32mI (453736) LED_CTRL: Decrease brightness: 98%[0m
+[0;32mI (453736) BTN_HDL: Button GPIO 5 pressed[0m
+[0;32mI (454016) MAIN: Button DOWN - Released[0m
+[0;32mI (454016) BTN_HDL: Button GPIO 5 released[0m
+[0;32mI (454206) MAIN: Button DOWN - Single press detected[0m
+[0;32mI (454206) PWM_MGR: Start fading to brightness: 97% (current: 98%)[0m
+[0;32mI (454206) LED_CTRL: Decrease brightness: 97%[0m
+[0;32mI (454206) BTN_HDL: Button GPIO 5 pressed[0m
+[0;32mI (454446) MAIN: LED Status - On: YES, Brightness: 97%, Fading: NO[0m
+[0;32mI (454456) MAIN: Button DOWN - Released[0m
+[0;32mI (454456) BTN_HDL: Button GPIO 5 released[0m
+[0;32mI (455086) MAIN: Button DOWN - Single press detected[0m
+[0;32mI (455086) PWM_MGR: Start fading to brightness: 96% (current: 97%)[0m
+[0;32mI (455086) LED_CTRL: Decrease brightness: 96%[0m
+[0;32mI (455086) BTN_HDL: Button GPIO 5 pressed[0m
+[0;32mI (455186) MAIN: Button DOWN - Released[0m
+[0;32mI (455186) BTN_HDL: Button GPIO 5 released[0m
+[0;32mI (455446) MAIN: LED Status - On: YES, Brightness: 96%, Fading: NO[0m
+[0;32mI (455786) MAIN: Button DOWN - Single press detected[0m
+[0;32mI (455786) PWM_MGR: Start fading to brightness: 95% (current: 96%)[0m
+[0;32mI (455786) LED_CTRL: Decrease brightness: 95%[0m
+[0;32mI (455786) BTN_HDL: Button GPIO 5 pressed[0m
+[0;32mI (455996) MAIN: Button DOWN - Released[0m
+[0;32mI (455996) BTN_HDL: Button GPIO 5 released[0m
+[0;32mI (456346) MAIN: Button DOWN - Single press detected[0m
+[0;32mI (456346) PWM_MGR: Start fading to brightness: 94% (current: 95%)[0m
+[0;32mI (456346) LED_CTRL: Decrease brightness: 94%[0m
+[0;32mI (456346) BTN_HDL: Button GPIO 5 pressed[0m
+[0;32mI (456446) MAIN: LED Status - On: YES, Brightness: 94%, Fading: NO[0m
+[0;32mI (456516) MAIN: Button DOWN - Released[0m
+[0;32mI (456516) BTN_HDL: Button GPIO 5 released[0m
+[0;32mI (456886) MAIN: Button DOWN - Single press detected[0m
+[0;32mI (456886) PWM_MGR: Start fading to brightness: 93% (current: 94%)[0m
+[0;32mI (456886) LED_CTRL: Decrease brightness: 93%[0m
+[0;32mI (456886) BTN_HDL: Button GPIO 5 pressed[0m
+[0;32mI (456996) MAIN: Button DOWN - Released[0m
+[0;32mI (456996) BTN_HDL: Button GPIO 5 released[0m
+[0;32mI (457316) MAIN: Button DOWN - Single press detected[0m
+[0;32mI (457316) PWM_MGR: Start fading to brightness: 92% (current: 93%)[0m
+[0;32mI (457316) LED_CTRL: Decrease brightness: 92%[0m
+[0;32mI (457316) BTN_HDL: Button GPIO 5 pressed[0m
+[0;32mI (457406) MAIN: Button DOWN - Released[0m
+[0;32mI (457406) BTN_HDL: Button GPIO 5 released[0m
+[0;32mI (457446) MAIN: LED Status - On: YES, Brightness: 92%, Fading: NO[0m
+[0;32mI (457666) MAIN: Button DOWN - Single press detected[0m
+[0;32mI (457666) PWM_MGR: Start fading to brightness: 91% (current: 92%)[0m
+[0;32mI (457666) LED_CTRL: Decrease brightness: 91%[0m
+[0;32mI (457666) BTN_HDL: Button GPIO 5 pressed[0m
+[0;32mI (457766) MAIN: Button DOWN - Released[0m
+[0;32mI (457766) BTN_HDL: Button GPIO 5 released[0m
+[0;32mI (458446) MAIN: LED Status - On: YES, Brightness: 91%, Fading: NO[0m
+[0;32mI (458696) MAIN: Button DOWN - Single press detected[0m
+[0;32mI (458696) PWM_MGR: Start fading to brightness: 90% (current: 91%)[0m
+[0;32mI (458696) LED_CTRL: Decrease brightness: 90%[0m
+[0;32mI (458696) BTN_HDL: Button GPIO 5 pressed[0m
+[0;32mI (459196) MAIN: Button DOWN - Long press (continuous decrease)[0m
+[0;32mI (459196) PWM_MGR: Start fading to brightness: 89% (current: 90%)[0m
+[0;32mI (459196) LED_CTRL: Decrease brightness: 89%[0m
+[0;32mI (459196) BTN_HDL: Button GPIO 5 long press triggered[0m
+[0;32mI (459446) MAIN: LED Status - On: YES, Brightness: 89%, Fading: NO[0m
+[0;32mI (460446) MAIN: LED Status - On: YES, Brightness: 89%, Fading: NO[0m
+[0;32mI (461426) MAIN: Button DOWN - Released[0m
+[0;32mI (461426) BTN_HDL: Button GPIO 5 released[0m
+[0;32mI (461446) MAIN: LED Status - On: YES, Brightness: 89%, Fading: NO[0m
+[0;32mI (461636) MAIN: Button DOWN - Single press detected[0m
+[0;32mI (461636) PWM_MGR: Start fading to brightness: 88% (current: 89%)[0m
+[0;32mI (461636) LED_CTRL: Decrease brightness: 88%[0m
+[0;32mI (461636) BTN_HDL: Button GPIO 5 pressed[0m
+[0;32mI (461726) MAIN: Button DOWN - Released[0m
+[0;32mI (461726) BTN_HDL: Button GPIO 5 released[0m
+[0;32mI (461846) MAIN: Button DOWN - Single press detected[0m
+[0;32mI (461846) PWM_MGR: Start fading to brightness: 87% (current: 88%)[0m
+[0;32mI (461846) LED_CTRL: Decrease brightness: 87%[0m
+[0;32mI (461846) BTN_HDL: Button GPIO 5 pressed[0m
+[0;32mI (461906) MAIN: Button DOWN - Released[0m
+[0;32mI (461906) BTN_HDL: Button GPIO 5 released[0m
+[0;32mI (462026) MAIN: Button DOWN - Single press detected[0m
+[0;32mI (462026) PWM_MGR: Start fading to brightness: 86% (current: 87%)[0m
+[0;32mI (462026) LED_CTRL: Decrease brightness: 86%[0m
+[0;32mI (462026) BTN_HDL: Button GPIO 5 pressed[0m
+[0;32mI (462086) MAIN: Button DOWN - Released[0m
+[0;32mI (462086) BTN_HDL: Button GPIO 5 released[0m
+[0;32mI (462446) MAIN: LED Status - On: YES, Brightness: 86%, Fading: NO[0m
+[0;32mI (462956) MAIN: Button DOWN - Single press detected[0m
+[0;32mI (462956) PWM_MGR: Start fading to brightness: 85% (current: 86%)[0m
+[0;32mI (462956) LED_CTRL: Decrease brightness: 85%[0m
+[0;32mI (462956) BTN_HDL: Button GPIO 5 pressed[0m
+[0;32mI (463056) MAIN: Button DOWN - Released[0m
+[0;32mI (463056) BTN_HDL: Button GPIO 5 released[0m
+[0;32mI (463196) MAIN: Button DOWN - Single press detected[0m
+[0;32mI (463196) PWM_MGR: Start fading to brightness: 84% (current: 85%)[0m
+[0;32mI (463196) LED_CTRL: Decrease brightness: 84%[0m
+[0;32mI (463196) BTN_HDL: Button GPIO 5 pressed[0m
+[0;32mI (463276) MAIN: Button DOWN - Released[0m
+[0;32mI (463276) BTN_HDL: Button GPIO 5 released[0m
+[0;32mI (463406) MAIN: Button DOWN - Single press detected[0m
+[0;32mI (463406) PWM_MGR: Start fading to brightness: 83% (current: 84%)[0m
+[0;32mI (463406) LED_CTRL: Decrease brightness: 83%[0m
+[0;32mI (463406) BTN_HDL: Button GPIO 5 pressed[0m
+[0;32mI (463446) MAIN: LED Status - On: YES, Brightness: 83%, Fading: NO[0m
+[0;32mI (463466) MAIN: Button DOWN - Released[0m
+[0;32mI (463466) BTN_HDL: Button GPIO 5 released[0m
+[0;32mI (463576) MAIN: Button DOWN - Single press detected[0m
+[0;32mI (463576) PWM_MGR: Start fading to brightness: 82% (current: 83%)[0m
+[0;32mI (463576) LED_CTRL: Decrease brightness: 82%[0m
+[0;32mI (463576) BTN_HDL: Button GPIO 5 pressed[0m
+[0;32mI (463636) MAIN: Button DOWN - Released[0m
+[0;32mI (463636) BTN_HDL: Button GPIO 5 released[0m
+[0;32mI (463756) MAIN: Button DOWN - Single press detected[0m
+[0;32mI (463756) PWM_MGR: Start fading to brightness: 81% (current: 82%)[0m
+[0;32mI (463756) LED_CTRL: Decrease brightness: 81%[0m
+[0;32mI (463756) BTN_HDL: Button GPIO 5 pressed[0m
+[0;32mI (463816) MAIN: Button DOWN - Released[0m
+[0;32mI (463816) BTN_HDL: Button GPIO 5 released[0m
+[0;32mI (463926) MAIN: Button DOWN - Single press detected[0m
+[0;32mI (463926) PWM_MGR: Start fading to brightness: 80% (current: 81%)[0m
+[0;32mI (463926) LED_CTRL: Decrease brightness: 80%[0m
+[0;32mI (463926) BTN_HDL: Button GPIO 5 pressed[0m
+[0;32mI (463996) MAIN: Button DOWN - Released[0m
+[0;32mI (463996) BTN_HDL: Button GPIO 5 released[0m
+[0;32mI (464126) MAIN: Button DOWN - Single press detected[0m
+[0;32mI (464126) PWM_MGR: Start fading to brightness: 79% (current: 80%)[0m
+[0;32mI (464126) LED_CTRL: Decrease brightness: 79%[0m
+[0;32mI (464126) BTN_HDL: Button GPIO 5 pressed[0m
+[0;32mI (464196) MAIN: Button DOWN - Released[0m
+[0;32mI (464196) BTN_HDL: Button GPIO 5 released[0m
+[0;32mI (464286) MAIN: Button DOWN - Single press detected[0m
+[0;32mI (464286) PWM_MGR: Start fading to brightness: 78% (current: 79%)[0m
+[0;32mI (464286) LED_CTRL: Decrease brightness: 78%[0m
+[0;32mI (464286) BTN_HDL: Button GPIO 5 pressed[0m
+[0;32mI (464356) MAIN: Button DOWN - Released[0m
+[0;32mI (464356) BTN_HDL: Button GPIO 5 released[0m
+[0;32mI (464446) MAIN: LED Status - On: YES, Brightness: 78%, Fading: NO[0m
+[0;32mI (464486) MAIN: Button DOWN - Single press detected[0m
+[0;32mI (464486) PWM_MGR: Start fading to brightness: 77% (current: 78%)[0m
+[0;32mI (464486) LED_CTRL: Decrease brightness: 77%[0m
+[0;32mI (464486) BTN_HDL: Button GPIO 5 pressed[0m
+[0;32mI (464556) MAIN: Button DOWN - Released[0m
+[0;32mI (464556) BTN_HDL: Button GPIO 5 released[0m
+[0;32mI (464646) MAIN: Button DOWN - Single press detected[0m
+[0;32mI (464646) PWM_MGR: Start fading to brightness: 76% (current: 77%)[0m
+[0;32mI (464646) LED_CTRL: Decrease brightness: 76%[0m
+[0;32mI (464646) BTN_HDL: Button GPIO 5 pressed[0m
+[0;32mI (464716) MAIN: Button DOWN - Released[0m
+[0;32mI (464716) BTN_HDL: Button GPIO 5 released[0m
+[0;32mI (464846) MAIN: Button DOWN - Single press detected[0m
+[0;32mI (464846) PWM_MGR: Start fading to brightness: 75% (current: 76%)[0m
+[0;32mI (464846) LED_CTRL: Decrease brightness: 75%[0m
+[0;32mI (464846) BTN_HDL: Button GPIO 5 pressed[0m
+[0;32mI (464876) MAIN: Button DOWN - Released[0m
+[0;32mI (464876) BTN_HDL: Button GPIO 5 released[0m
+[0;32mI (465236) MAIN: Button DOWN - Single press detected[0m
+[0;32mI (465236) PWM_MGR: Start fading to brightness: 74% (current: 75%)[0m
+[0;32mI (465236) LED_CTRL: Decrease brightness: 74%[0m
+[0;32mI (465236) BTN_HDL: Button GPIO 5 pressed[0m
+[0;32mI (465266) MAIN: Button DOWN - Released[0m
+[0;32mI (465266) BTN_HDL: Button GPIO 5 released[0m
+[0;32mI (465426) MAIN: Button DOWN - Single press detected[0m
+[0;32mI (465426) PWM_MGR: Start fading to brightness: 73% (current: 74%)[0m
+[0;32mI (465426) LED_CTRL: Decrease brightness: 73%[0m
+[0;32mI (465426) BTN_HDL: Button GPIO 5 pressed[0m
+[0;32mI (465446) MAIN: LED Status - On: YES, Brightness: 73%, Fading: NO[0m
+[0;32mI (465486) MAIN: Button DOWN - Released[0m
+[0;32mI (465486) BTN_HDL: Button GPIO 5 released[0m
+[0;32mI (465606) MAIN: Button DOWN - Single press detected[0m
+[0;32mI (465606) PWM_MGR: Start fading to brightness: 72% (current: 73%)[0m
+[0;32mI (465606) LED_CTRL: Decrease brightness: 72%[0m
+[0;32mI (465606) BTN_HDL: Button GPIO 5 pressed[0m
+[0;32mI (465666) MAIN: Button DOWN - Released[0m
+[0;32mI (465666) BTN_HDL: Button GPIO 5 released[0m
+[0;32mI (465776) MAIN: Button DOWN - Single press detected[0m
+[0;32mI (465776) PWM_MGR: Start fading to brightness: 71% (current: 72%)[0m
+[0;32mI (465776) LED_CTRL: Decrease brightness: 71%[0m
+[0;32mI (465776) BTN_HDL: Button GPIO 5 pressed[0m
+[0;32mI (465846) MAIN: Button DOWN - Released[0m
+[0;32mI (465846) BTN_HDL: Button GPIO 5 released[0m
+[0;32mI (465946) MAIN: Button DOWN - Single press detected[0m
+[0;32mI (465946) PWM_MGR: Start fading to brightness: 70% (current: 71%)[0m
+[0;32mI (465946) LED_CTRL: Decrease brightness: 70%[0m
+[0;32mI (465946) BTN_HDL: Button GPIO 5 pressed[0m
+[0;32mI (466006) MAIN: Button DOWN - Released[0m
+[0;32mI (466006) BTN_HDL: Button GPIO 5 released[0m
+[0;32mI (466116) MAIN: Button DOWN - Single press detected[0m
+[0;32mI (466116) PWM_MGR: Start fading to brightness: 69% (current: 70%)[0m
+[0;32mI (466116) LED_CTRL: Decrease brightness: 69%[0m
+[0;32mI (466116) BTN_HDL: Button GPIO 5 pressed[0m
+[0;32mI (466186) MAIN: Button DOWN - Released[0m
+[0;32mI (466186) BTN_HDL: Button GPIO 5 released[0m
+[0;32mI (466256) MAIN: Button DOWN - Single press detected[0m
+[0;32mI (466256) PWM_MGR: Start fading to brightness: 68% (current: 69%)[0m
+[0;32mI (466256) LED_CTRL: Decrease brightness: 68%[0m
+[0;32mI (466256) BTN_HDL: Button GPIO 5 pressed[0m
+[0;32mI (466346) MAIN: Button DOWN - Released[0m
+[0;32mI (466346) BTN_HDL: Button GPIO 5 released[0m
+[0;32mI (466446) MAIN: Button DOWN - Single press detected[0m
+[0;32mI (466446) PWM_MGR: Start fading to brightness: 67% (current: 68%)[0m
+[0;32mI (466446) LED_CTRL: Decrease brightness: 67%[0m
+[0;32mI (466446) BTN_HDL: Button GPIO 5 pressed[0m
+[0;32mI (466456) MAIN: LED Status - On: YES, Brightness: 68%, Fading: YES[0m
+[0;32mI (466526) MAIN: Button DOWN - Released[0m
+[0;32mI (466526) BTN_HDL: Button GPIO 5 released[0m
+[0;32mI (466656) MAIN: Button DOWN - Single press detected[0m
+[0;32mI (466656) PWM_MGR: Start fading to brightness: 67% (current: 67%)[0m
+[0;32mI (466656) LED_CTRL: Decrease brightness: 67%[0m
+[0;32mI (466656) BTN_HDL: Button GPIO 5 pressed[0m
+[0;32mI (466726) MAIN: Button DOWN - Released[0m
+[0;32mI (466726) BTN_HDL: Button GPIO 5 released[0m
+[0;32mI (466826) MAIN: Button DOWN - Single press detected[0m
+[0;32mI (466826) PWM_MGR: Start fading to brightness: 66% (current: 67%)[0m
+[0;32mI (466826) LED_CTRL: Decrease brightness: 66%[0m
+[0;32mI (466826) BTN_HDL: Button GPIO 5 pressed[0m
+[0;32mI (466896) MAIN: Button DOWN - Released[0m
+[0;32mI (466896) BTN_HDL: Button GPIO 5 released[0m
+[0;32mI (466986) MAIN: Button DOWN - Single press detected[0m
+[0;32mI (466986) PWM_MGR: Start fading to brightness: 65% (current: 66%)[0m
+[0;32mI (466986) LED_CTRL: Decrease brightness: 65%[0m
+[0;32mI (466986) BTN_HDL: Button GPIO 5 pressed[0m
+[0;32mI (467066) MAIN: Button DOWN - Released[0m
+[0;32mI (467066) BTN_HDL: Button GPIO 5 released[0m
+[0;32mI (467196) MAIN: Button DOWN - Single press detected[0m
+[0;32mI (467196) PWM_MGR: Start fading to brightness: 64% (current: 65%)[0m
+[0;32mI (467196) LED_CTRL: Decrease brightness: 64%[0m
+[0;32mI (467196) BTN_HDL: Button GPIO 5 pressed[0m
+[0;32mI (467256) MAIN: Button DOWN - Released[0m
+[0;32mI (467256) BTN_HDL: Button GPIO 5 released[0m
+[0;32mI (467356) MAIN: Button DOWN - Single press detected[0m
+[0;32mI (467356) PWM_MGR: Start fading to brightness: 63% (current: 64%)[0m
+[0;32mI (467356) LED_CTRL: Decrease brightness: 63%[0m
+[0;32mI (467356) BTN_HDL: Button GPIO 5 pressed[0m
+[0;32mI (467446) MAIN: LED Status - On: YES, Brightness: 63%, Fading: NO[0m
+[0;32mI (467856) MAIN: Button DOWN - Long press (continuous decrease)[0m
+[0;32mI (467856) PWM_MGR: Start fading to brightness: 62% (current: 63%)[0m
+[0;32mI (467856) LED_CTRL: Decrease brightness: 62%[0m
+[0;32mI (467856) BTN_HDL: Button GPIO 5 long press triggered[0m
+[0;32mI (468446) MAIN: LED Status - On: YES, Brightness: 62%, Fading: NO[0m
+[0;32mI (468706) MAIN: Button DOWN - Released[0m
+[0;32mI (468706) BTN_HDL: Button GPIO 5 released[0m
+[0;32mI (468746) MAIN: Button DOWN - Single press detected[0m
+[0;32mI (468746) PWM_MGR: Start fading to brightness: 61% (current: 62%)[0m
+[0;32mI (468746) LED_CTRL: Decrease brightness: 61%[0m
+[0;32mI (468746) BTN_HDL: Button GPIO 5 pressed[0m
+[0;32mI (468786) MAIN: Button DOWN - Released[0m
+[0;32mI (468786) BTN_HDL: Button GPIO 5 released[0m
+[0;32mI (469116) MAIN: Button DOWN - Single press detected[0m
+[0;32mI (469116) PWM_MGR: Start fading to brightness: 60% (current: 61%)[0m
+[0;32mI (469116) LED_CTRL: Decrease brightness: 60%[0m
+[0;32mI (469116) BTN_HDL: Button GPIO 5 pressed[0m
+[0;32mI (469446) MAIN: LED Status - On: YES, Brightness: 60%, Fading: NO[0m
+[0;32mI (469616) MAIN: Button DOWN - Long press (continuous decrease)[0m
+[0;32mI (469616) PWM_MGR: Start fading to brightness: 59% (current: 60%)[0m
+[0;32mI (469616) LED_CTRL: Decrease brightness: 59%[0m
+[0;32mI (469616) BTN_HDL: Button GPIO 5 long press triggered[0m
+[0;32mI (470446) MAIN: LED Status - On: YES, Brightness: 59%, Fading: NO[0m
+[0;32mI (471446) MAIN: LED Status - On: YES, Brightness: 59%, Fading: NO[0m
+[0;32mI (472446) MAIN: LED Status - On: YES, Brightness: 59%, Fading: NO[0m
+[0;32mI (472886) MAIN: Button DOWN - Released[0m
+[0;32mI (472886) BTN_HDL: Button GPIO 5 released[0m
+[0;32mI (473216) MAIN: Button DOWN - Single press detected[0m
+[0;32mI (473216) PWM_MGR: Start fading to brightness: 58% (current: 59%)[0m
+[0;32mI (473216) LED_CTRL: Decrease brightness: 58%[0m
+[0;32mI (473216) BTN_HDL: Button GPIO 5 pressed[0m
+[0;32mI (473446) MAIN: LED Status - On: YES, Brightness: 58%, Fading: NO[0m
+[0;32mI (473716) MAIN: Button DOWN - Long press (continuous decrease)[0m
+[0;32mI (473716) PWM_MGR: Start fading to brightness: 57% (current: 58%)[0m
+[0;32mI (473716) LED_CTRL: Decrease brightness: 57%[0m
+[0;32mI (473716) BTN_HDL: Button GPIO 5 long press triggered[0m
+[0;32mI (473826) MAIN: Button DOWN - Released[0m
+[0;32mI (473826) BTN_HDL: Button GPIO 5 released[0m
+[0;32mI (474016) MAIN: Button DOWN - Single press detected[0m
+[0;32mI (474016) PWM_MGR: Start fading to brightness: 56% (current: 57%)[0m
+[0;32mI (474016) LED_CTRL: Decrease brightness: 56%[0m
+[0;32mI (474016) BTN_HDL: Button GPIO 5 pressed[0m
+[0;32mI (474076) MAIN: Button DOWN - Released[0m
+[0;32mI (474076) BTN_HDL: Button GPIO 5 released[0m
+[0;32mI (474216) MAIN: Button DOWN - Single press detected[0m
+[0;32mI (474216) PWM_MGR: Start fading to brightness: 55% (current: 56%)[0m
+[0;32mI (474216) LED_CTRL: Decrease brightness: 55%[0m
+[0;32mI (474216) BTN_HDL: Button GPIO 5 pressed[0m
+[0;32mI (474286) MAIN: Button DOWN - Released[0m
+[0;32mI (474286) BTN_HDL: Button GPIO 5 released[0m
+[0;32mI (474386) MAIN: Button DOWN - Single press detected[0m
+[0;32mI (474386) PWM_MGR: Start fading to brightness: 54% (current: 55%)[0m
+[0;32mI (474386) LED_CTRL: Decrease brightness: 54%[0m
+[0;32mI (474386) BTN_HDL: Button GPIO 5 pressed[0m
+[0;32mI (474446) MAIN: LED Status - On: YES, Brightness: 54%, Fading: NO[0m
+[0;32mI (474456) MAIN: Button DOWN - Released[0m
+[0;32mI (474456) BTN_HDL: Button GPIO 5 released[0m
+[0;32mI (474556) MAIN: Button DOWN - Single press detected[0m
+[0;32mI (474556) PWM_MGR: Start fading to brightness: 53% (current: 54%)[0m
+[0;32mI (474556) LED_CTRL: Decrease brightness: 53%[0m
+[0;32mI (474556) BTN_HDL: Button GPIO 5 pressed[0m
+[0;32mI (474616) MAIN: Button DOWN - Released[0m
+[0;32mI (474616) BTN_HDL: Button GPIO 5 released[0m
+[0;32mI (474726) MAIN: Button DOWN - Single press detected[0m
+[0;32mI (474726) PWM_MGR: Start fading to brightness: 52% (current: 53%)[0m
+[0;32mI (474726) LED_CTRL: Decrease brightness: 52%[0m
+[0;32mI (474726) BTN_HDL: Button GPIO 5 pressed[0m
+[0;32mI (474786) MAIN: Button DOWN - Released[0m
+[0;32mI (474786) BTN_HDL: Button GPIO 5 released[0m
+[0;32mI (474886) MAIN: Button DOWN - Single press detected[0m
+[0;32mI (474886) PWM_MGR: Start fading to brightness: 51% (current: 52%)[0m
+[0;32mI (474886) LED_CTRL: Decrease brightness: 51%[0m
+[0;32mI (474886) BTN_HDL: Button GPIO 5 pressed[0m
+[0;32mI (474946) MAIN: Button DOWN - Released[0m
+[0;32mI (474946) BTN_HDL: Button GPIO 5 released[0m
+[0;32mI (475206) MAIN: Button DOWN - Single press detected[0m
+[0;32mI (475206) PWM_MGR: Start fading to brightness: 50% (current: 51%)[0m
+[0;32mI (475206) LED_CTRL: Decrease brightness: 50%[0m
+[0;32mI (475206) BTN_HDL: Button GPIO 5 pressed[0m
+[0;32mI (475256) MAIN: Button DOWN - Released[0m
+[0;32mI (475256) BTN_HDL: Button GPIO 5 released[0m
+[0;32mI (475356) MAIN: Button DOWN - Single press detected[0m
+[0;32mI (475356) PWM_MGR: Start fading to brightness: 49% (current: 50%)[0m
+[0;32mI (475356) LED_CTRL: Decrease brightness: 49%[0m
+[0;32mI (475356) BTN_HDL: Button GPIO 5 pressed[0m
+[0;32mI (475426) MAIN: Button DOWN - Released[0m
+[0;32mI (475426) BTN_HDL: Button GPIO 5 released[0m
+[0;32mI (475446) MAIN: LED Status - On: YES, Brightness: 49%, Fading: NO[0m
+[0;32mI (475506) MAIN: Button DOWN - Single press detected[0m
+[0;32mI (475506) PWM_MGR: Start fading to brightness: 48% (current: 49%)[0m
+[0;32mI (475506) LED_CTRL: Decrease brightness: 48%[0m
+[0;32mI (475506) BTN_HDL: Button GPIO 5 pressed[0m
+[0;32mI (475576) MAIN: Button DOWN - Released[0m
+[0;32mI (475576) BTN_HDL: Button GPIO 5 released[0m
+[0;32mI (475686) MAIN: Button DOWN - Single press detected[0m
+[0;32mI (475686) PWM_MGR: Start fading to brightness: 47% (current: 48%)[0m
+[0;32mI (475686) LED_CTRL: Decrease brightness: 47%[0m
+[0;32mI (475686) BTN_HDL: Button GPIO 5 pressed[0m
+[0;32mI (475746) MAIN: Button DOWN - Released[0m
+[0;32mI (475746) BTN_HDL: Button GPIO 5 released[0m
+[0;32mI (475836) MAIN: Button DOWN - Single press detected[0m
+[0;32mI (475836) PWM_MGR: Start fading to brightness: 46% (current: 47%)[0m
+[0;32mI (475836) LED_CTRL: Decrease brightness: 46%[0m
+[0;32mI (475836) BTN_HDL: Button GPIO 5 pressed[0m
+[0;32mI (475896) MAIN: Button DOWN - Released[0m
+[0;32mI (475896) BTN_HDL: Button GPIO 5 released[0m
+[0;32mI (475996) MAIN: Button DOWN - Single press detected[0m
+[0;32mI (475996) PWM_MGR: Start fading to brightness: 45% (current: 46%)[0m
+[0;32mI (475996) LED_CTRL: Decrease brightness: 45%[0m
+[0;32mI (475996) BTN_HDL: Button GPIO 5 pressed[0m
+[0;32mI (476056) MAIN: Button DOWN - Released[0m
+[0;32mI (476056) BTN_HDL: Button GPIO 5 released[0m
+[0;32mI (476156) MAIN: Button DOWN - Single press detected[0m
+[0;32mI (476156) PWM_MGR: Start fading to brightness: 44% (current: 45%)[0m
+[0;32mI (476156) LED_CTRL: Decrease brightness: 44%[0m
+[0;32mI (476156) BTN_HDL: Button GPIO 5 pressed[0m
+[0;32mI (476216) MAIN: Button DOWN - Released[0m
+[0;32mI (476216) BTN_HDL: Button GPIO 5 released[0m
+[0;32mI (476316) MAIN: Button DOWN - Single press detected[0m
+[0;32mI (476316) PWM_MGR: Start fading to brightness: 43% (current: 44%)[0m
+[0;32mI (476316) LED_CTRL: Decrease brightness: 43%[0m
+[0;32mI (476316) BTN_HDL: Button GPIO 5 pressed[0m
+[0;32mI (476376) MAIN: Button DOWN - Released[0m
+[0;32mI (476376) BTN_HDL: Button GPIO 5 released[0m
+[0;32mI (476446) MAIN: LED Status - On: YES, Brightness: 43%, Fading: NO[0m
+[0;32mI (476496) MAIN: Button DOWN - Single press detected[0m
+[0;32mI (476496) PWM_MGR: Start fading to brightness: 42% (current: 43%)[0m
+[0;32mI (476496) LED_CTRL: Decrease brightness: 42%[0m
+[0;32mI (476496) BTN_HDL: Button GPIO 5 pressed[0m
+[0;32mI (476536) MAIN: Button DOWN - Released[0m
+[0;32mI (476536) BTN_HDL: Button GPIO 5 released[0m
+[0;32mI (476666) MAIN: Button DOWN - Single press detected[0m
+[0;32mI (476666) PWM_MGR: Start fading to brightness: 41% (current: 42%)[0m
+[0;32mI (476666) LED_CTRL: Decrease brightness: 41%[0m
+[0;32mI (476666) BTN_HDL: Button GPIO 5 pressed[0m
+[0;32mI (476696) MAIN: Button DOWN - Released[0m
+[0;32mI (476696) BTN_HDL: Button GPIO 5 released[0m
+[0;32mI (476816) MAIN: Button DOWN - Single press detected[0m
+[0;32mI (476816) PWM_MGR: Start fading to brightness: 40% (current: 41%)[0m
+[0;32mI (476816) LED_CTRL: Decrease brightness: 40%[0m
+[0;32mI (476816) BTN_HDL: Button GPIO 5 pressed[0m
+[0;32mI (476866) MAIN: Button DOWN - Released[0m
+[0;32mI (476866) BTN_HDL: Button GPIO 5 released[0m
+[0;32mI (476956) MAIN: Button DOWN - Single press detected[0m
+[0;32mI (476956) PWM_MGR: Start fading to brightness: 39% (current: 40%)[0m
+[0;32mI (476956) LED_CTRL: Decrease brightness: 39%[0m
+[0;32mI (476956) BTN_HDL: Button GPIO 5 pressed[0m
+[0;32mI (477026) MAIN: Button DOWN - Released[0m
+[0;32mI (477026) BTN_HDL: Button GPIO 5 released[0m
+[0;32mI (477166) MAIN: Button DOWN - Single press detected[0m
+[0;32mI (477166) PWM_MGR: Start fading to brightness: 38% (current: 39%)[0m
+[0;32mI (477166) LED_CTRL: Decrease brightness: 38%[0m
+[0;32mI (477166) BTN_HDL: Button GPIO 5 pressed[0m
+[0;32mI (477216) MAIN: Button DOWN - Released[0m
+[0;32mI (477216) BTN_HDL: Button GPIO 5 released[0m
+[0;32mI (477296) MAIN: Button DOWN - Single press detected[0m
+[0;32mI (477296) PWM_MGR: Start fading to brightness: 37% (current: 38%)[0m
+[0;32mI (477296) LED_CTRL: Decrease brightness: 37%[0m
+[0;32mI (477296) BTN_HDL: Button GPIO 5 pressed[0m
+[0;32mI (477376) MAIN: Button DOWN - Released[0m
+[0;32mI (477376) BTN_HDL: Button GPIO 5 released[0m
+[0;32mI (477446) MAIN: LED Status - On: YES, Brightness: 37%, Fading: NO[0m
+[0;32mI (477486) MAIN: Button DOWN - Single press detected[0m
+[0;32mI (477486) PWM_MGR: Start fading to brightness: 36% (current: 37%)[0m
+[0;32mI (477486) LED_CTRL: Decrease brightness: 36%[0m
+[0;32mI (477486) BTN_HDL: Button GPIO 5 pressed[0m
+[0;32mI (477556) MAIN: Button DOWN - Released[0m
+[0;32mI (477556) BTN_HDL: Button GPIO 5 released[0m
+[0;32mI (477656) MAIN: Button DOWN - Single press detected[0m
+[0;32mI (477656) PWM_MGR: Start fading to brightness: 35% (current: 36%)[0m
+[0;32mI (477656) LED_CTRL: Decrease brightness: 35%[0m
+[0;32mI (477656) BTN_HDL: Button GPIO 5 pressed[0m
+[0;32mI (477726) MAIN: Button DOWN - Released[0m
+[0;32mI (477726) BTN_HDL: Button GPIO 5 released[0m
+[0;32mI (478166) MAIN: Button DOWN - Single press detected[0m
+[0;32mI (478166) PWM_MGR: Start fading to brightness: 34% (current: 35%)[0m
+[0;32mI (478166) LED_CTRL: Decrease brightness: 34%[0m
+[0;32mI (478166) BTN_HDL: Button GPIO 5 pressed[0m
+[0;32mI (478226) MAIN: Button DOWN - Released[0m
+[0;32mI (478226) BTN_HDL: Button GPIO 5 released[0m
+[0;32mI (478336) MAIN: Button DOWN - Single press detected[0m
+[0;32mI (478336) PWM_MGR: Start fading to brightness: 33% (current: 34%)[0m
+[0;32mI (478336) LED_CTRL: Decrease brightness: 33%[0m
+[0;32mI (478336) BTN_HDL: Button GPIO 5 pressed[0m
+[0;32mI (478416) MAIN: Button DOWN - Released[0m
+[0;32mI (478416) BTN_HDL: Button GPIO 5 released[0m
+[0;32mI (478446) MAIN: LED Status - On: YES, Brightness: 33%, Fading: NO[0m
+[0;32mI (478516) MAIN: Button DOWN - Single press detected[0m
+[0;32mI (478516) PWM_MGR: Start fading to brightness: 32% (current: 33%)[0m
+[0;32mI (478516) LED_CTRL: Decrease brightness: 32%[0m
+[0;32mI (478516) BTN_HDL: Button GPIO 5 pressed[0m
+[0;32mI (478576) MAIN: Button DOWN - Released[0m
+[0;32mI (478576) BTN_HDL: Button GPIO 5 released[0m
+[0;32mI (478696) MAIN: Button DOWN - Single press detected[0m
+[0;32mI (478696) PWM_MGR: Start fading to brightness: 31% (current: 32%)[0m
+[0;32mI (478696) LED_CTRL: Decrease brightness: 31%[0m
+[0;32mI (478696) BTN_HDL: Button GPIO 5 pressed[0m
+[0;32mI (478766) MAIN: Button DOWN - Released[0m
+[0;32mI (478766) BTN_HDL: Button GPIO 5 released[0m
+[0;32mI (478886) MAIN: Button DOWN - Single press detected[0m
+[0;32mI (478886) PWM_MGR: Start fading to brightness: 30% (current: 31%)[0m
+[0;32mI (478886) LED_CTRL: Decrease brightness: 30%[0m
+[0;32mI (478886) BTN_HDL: Button GPIO 5 pressed[0m
+[0;32mI (478946) MAIN: Button DOWN - Released[0m
+[0;32mI (478946) BTN_HDL: Button GPIO 5 released[0m
+[0;32mI (479046) MAIN: Button DOWN - Single press detected[0m
+[0;32mI (479046) PWM_MGR: Start fading to brightness: 29% (current: 30%)[0m
+[0;32mI (479046) LED_CTRL: Decrease brightness: 29%[0m
+[0;32mI (479046) BTN_HDL: Button GPIO 5 pressed[0m
+[0;32mI (479106) MAIN: Button DOWN - Released[0m
+[0;32mI (479106) BTN_HDL: Button GPIO 5 released[0m
+[0;32mI (479206) MAIN: Button DOWN - Single press detected[0m
+[0;32mI (479206) PWM_MGR: Start fading to brightness: 28% (current: 29%)[0m
+[0;32mI (479206) LED_CTRL: Decrease brightness: 28%[0m
+[0;32mI (479206) BTN_HDL: Button GPIO 5 pressed[0m
+[0;32mI (479276) MAIN: Button DOWN - Released[0m
+[0;32mI (479276) BTN_HDL: Button GPIO 5 released[0m
+[0;32mI (479376) MAIN: Button DOWN - Single press detected[0m
+[0;32mI (479376) PWM_MGR: Start fading to brightness: 27% (current: 28%)[0m
+[0;32mI (479376) LED_CTRL: Decrease brightness: 27%[0m
+[0;32mI (479376) BTN_HDL: Button GPIO 5 pressed[0m
+[0;32mI (479446) MAIN: Button DOWN - Released[0m
+[0;32mI (479446) BTN_HDL: Button GPIO 5 released[0m
+[0;32mI (479446) MAIN: LED Status - On: YES, Brightness: 27%, Fading: NO[0m
+[0;32mI (479536) MAIN: Button DOWN - Single press detected[0m
+[0;32mI (479536) PWM_MGR: Start fading to brightness: 26% (current: 27%)[0m
+[0;32mI (479536) LED_CTRL: Decrease brightness: 26%[0m
+[0;32mI (479536) BTN_HDL: Button GPIO 5 pressed[0m
+[0;32mI (479606) MAIN: Button DOWN - Released[0m
+[0;32mI (479606) BTN_HDL: Button GPIO 5 released[0m
+[0;32mI (479696) MAIN: Button DOWN - Single press detected[0m
+[0;32mI (479696) PWM_MGR: Start fading to brightness: 25% (current: 26%)[0m
+[0;32mI (479696) LED_CTRL: Decrease brightness: 25%[0m
+[0;32mI (479696) BTN_HDL: Button GPIO 5 pressed[0m
+[0;32mI (479796) MAIN: Button DOWN - Released[0m
+[0;32mI (479796) BTN_HDL: Button GPIO 5 released[0m
+[0;32mI (479836) MAIN: Button DOWN - Single press detected[0m
+[0;32mI (479836) PWM_MGR: Start fading to brightness: 24% (current: 25%)[0m
+[0;32mI (479836) LED_CTRL: Decrease brightness: 24%[0m
+[0;32mI (479836) BTN_HDL: Button GPIO 5 pressed[0m
+[0;32mI (479896) MAIN: Button DOWN - Released[0m
+[0;32mI (479896) BTN_HDL: Button GPIO 5 released[0m
+[0;32mI (479996) MAIN: Button DOWN - Single press detected[0m
+[0;32mI (479996) PWM_MGR: Start fading to brightness: 23% (current: 24%)[0m
+[0;32mI (479996) LED_CTRL: Decrease brightness: 23%[0m
+[0;32mI (479996) BTN_HDL: Button GPIO 5 pressed[0m
+[0;32mI (480066) MAIN: Button DOWN - Released[0m
+[0;32mI (480066) BTN_HDL: Button GPIO 5 released[0m
+[0;32mI (480446) MAIN: LED Status - On: YES, Brightness: 23%, Fading: NO[0m
+[0;32mI (480496) MAIN: Button DOWN - Single press detected[0m
+[0;32mI (480496) PWM_MGR: Start fading to brightness: 22% (current: 23%)[0m
+[0;32mI (480496) LED_CTRL: Decrease brightness: 22%[0m
+[0;32mI (480496) BTN_HDL: Button GPIO 5 pressed[0m
+[0;32mI (480556) MAIN: Button DOWN - Released[0m
+[0;32mI (480556) BTN_HDL: Button GPIO 5 released[0m
+[0;32mI (480696) MAIN: Button DOWN - Single press detected[0m
+[0;32mI (480696) PWM_MGR: Start fading to brightness: 21% (current: 22%)[0m
+[0;32mI (480696) LED_CTRL: Decrease brightness: 21%[0m
+[0;32mI (480696) BTN_HDL: Button GPIO 5 pressed[0m
+[0;32mI (480766) MAIN: Button DOWN - Released[0m
+[0;32mI (480766) BTN_HDL: Button GPIO 5 released[0m
+[0;32mI (480846) MAIN: Button DOWN - Single press detected[0m
+[0;32mI (480846) PWM_MGR: Start fading to brightness: 20% (current: 21%)[0m
+[0;32mI (480846) LED_CTRL: Decrease brightness: 20%[0m
+[0;32mI (480846) BTN_HDL: Button GPIO 5 pressed[0m
+[0;32mI (480906) MAIN: Button DOWN - Released[0m
+[0;32mI (480906) BTN_HDL: Button GPIO 5 released[0m
+[0;32mI (481026) MAIN: Button DOWN - Single press detected[0m
+[0;32mI (481026) PWM_MGR: Start fading to brightness: 19% (current: 20%)[0m
+[0;32mI (481026) LED_CTRL: Decrease brightness: 19%[0m
+[0;32mI (481026) BTN_HDL: Button GPIO 5 pressed[0m
+[0;32mI (481146) MAIN: Button DOWN - Released[0m
+[0;32mI (481146) BTN_HDL: Button GPIO 5 released[0m
+[0;32mI (481226) MAIN: Button DOWN - Single press detected[0m
+[0;32mI (481226) PWM_MGR: Start fading to brightness: 18% (current: 19%)[0m
+[0;32mI (481226) LED_CTRL: Decrease brightness: 18%[0m
+[0;32mI (481226) BTN_HDL: Button GPIO 5 pressed[0m
+[0;32mI (481446) MAIN: LED Status - On: YES, Brightness: 18%, Fading: NO[0m
+[0;32mI (481486) MAIN: Button DOWN - Released[0m
+[0;32mI (481486) BTN_HDL: Button GPIO 5 released[0m
+[0;32mI (481576) MAIN: Button DOWN - Single press detected[0m
+[0;32mI (481576) PWM_MGR: Start fading to brightness: 17% (current: 18%)[0m
+[0;32mI (481576) LED_CTRL: Decrease brightness: 17%[0m
+[0;32mI (481576) BTN_HDL: Button GPIO 5 pressed[0m
+[0;32mI (481656) MAIN: Button DOWN - Released[0m
+[0;32mI (481656) BTN_HDL: Button GPIO 5 released[0m
+[0;32mI (481776) MAIN: Button DOWN - Single press detected[0m
+[0;32mI (481776) PWM_MGR: Start fading to brightness: 16% (current: 17%)[0m
+[0;32mI (481776) LED_CTRL: Decrease brightness: 16%[0m
+[0;32mI (481776) BTN_HDL: Button GPIO 5 pressed[0m
+[0;32mI (481846) MAIN: Button DOWN - Released[0m
+[0;32mI (481846) BTN_HDL: Button GPIO 5 released[0m
+[0;32mI (481966) MAIN: Button DOWN - Single press detected[0m
+[0;32mI (481966) PWM_MGR: Start fading to brightness: 15% (current: 16%)[0m
+[0;32mI (481966) LED_CTRL: Decrease brightness: 15%[0m
+[0;32mI (481966) BTN_HDL: Button GPIO 5 pressed[0m
+[0;32mI (482036) MAIN: Button DOWN - Released[0m
+[0;32mI (482036) BTN_HDL: Button GPIO 5 released[0m
+[0;32mI (482146) MAIN: Button DOWN - Single press detected[0m
+[0;32mI (482146) PWM_MGR: Start fading to brightness: 14% (current: 15%)[0m
+[0;32mI (482146) LED_CTRL: Decrease brightness: 14%[0m
+[0;32mI (482146) BTN_HDL: Button GPIO 5 pressed[0m
+[0;32mI (482226) MAIN: Button DOWN - Released[0m
+[0;32mI (482226) BTN_HDL: Button GPIO 5 released[0m
+[0;32mI (482296) MAIN: Button DOWN - Single press detected[0m
+[0;32mI (482296) PWM_MGR: Start fading to brightness: 13% (current: 14%)[0m
+[0;32mI (482296) LED_CTRL: Decrease brightness: 13%[0m
+[0;32mI (482296) BTN_HDL: Button GPIO 5 pressed[0m
+[0;32mI (482376) MAIN: Button DOWN - Released[0m
+[0;32mI (482376) BTN_HDL: Button GPIO 5 released[0m
+[0;32mI (482446) MAIN: LED Status - On: YES, Brightness: 13%, Fading: NO[0m
+[0;32mI (482496) MAIN: Button DOWN - Single press detected[0m
+[0;32mI (482496) PWM_MGR: Start fading to brightness: 12% (current: 13%)[0m
+[0;32mI (482496) LED_CTRL: Decrease brightness: 12%[0m
+[0;32mI (482496) BTN_HDL: Button GPIO 5 pressed[0m
+[0;32mI (482656) MAIN: Button DOWN - Released[0m
+[0;32mI (482656) BTN_HDL: Button GPIO 5 released[0m
+[0;32mI (483256) MAIN: Button DOWN - Single press detected[0m
+[0;32mI (483256) PWM_MGR: Start fading to brightness: 11% (current: 12%)[0m
+[0;32mI (483256) LED_CTRL: Decrease brightness: 11%[0m
+[0;32mI (483256) BTN_HDL: Button GPIO 5 pressed[0m
+[0;32mI (483446) MAIN: LED Status - On: YES, Brightness: 11%, Fading: NO[0m
+[0;32mI (483756) MAIN: Button DOWN - Long press (continuous decrease)[0m
+[0;32mI (483756) PWM_MGR: Start fading to brightness: 10% (current: 11%)[0m
+[0;32mI (483756) LED_CTRL: Decrease brightness: 10%[0m
+[0;32mI (483756) BTN_HDL: Button GPIO 5 long press triggered[0m
+[0;32mI (484446) MAIN: LED Status - On: YES, Brightness: 10%, Fading: NO[0m
+[0;32mI (485446) MAIN: LED Status - On: YES, Brightness: 10%, Fading: NO[0m
+[0;32mI (485836) MAIN: Button DOWN - Released[0m
+[0;32mI (485836) BTN_HDL: Button GPIO 5 released[0m
+[0;32mI (486016) MAIN: Button DOWN - Single press detected[0m
+[0;32mI (486016) PWM_MGR: Start fading to brightness: 9% (current: 10%)[0m
+[0;32mI (486016) LED_CTRL: Decrease brightness: 9%[0m
+[0;32mI (486016) BTN_HDL: Button GPIO 5 pressed[0m
+[0;32mI (486406) MAIN: Button DOWN - Released[0m
+[0;32mI (486406) BTN_HDL: Button GPIO 5 released[0m
+[0;32mI (486446) MAIN: LED Status - On: YES, Brightness: 9%, Fading: NO[0m
+[0;32mI (486456) MAIN: Button DOWN - Single press detected[0m
+[0;32mI (486456) PWM_MGR: Start fading to brightness: 8% (current: 9%)[0m
+[0;32mI (486456) LED_CTRL: Decrease brightness: 8%[0m
+[0;32mI (486456) BTN_HDL: Button GPIO 5 pressed[0m
+[0;32mI (486956) MAIN: Button DOWN - Long press (continuous decrease)[0m
+[0;32mI (486956) PWM_MGR: Start fading to brightness: 7% (current: 8%)[0m
+[0;32mI (486956) LED_CTRL: Decrease brightness: 7%[0m
+[0;32mI (486956) BTN_HDL: Button GPIO 5 long press triggered[0m
+[0;32mI (487256) MAIN: Button DOWN - Released[0m
+[0;32mI (487256) BTN_HDL: Button GPIO 5 released[0m
+[0;32mI (487446) MAIN: LED Status - On: YES, Brightness: 7%, Fading: NO[0m
+[0;32mI (488446) MAIN: LED Status - On: YES, Brightness: 7%, Fading: NO[0m
+[0;32mI (488956) MAIN: Button DOWN - Single press detected[0m
+[0;32mI (488956) PWM_MGR: Start fading to brightness: 6% (current: 7%)[0m
+[0;32mI (488956) LED_CTRL: Decrease brightness: 6%[0m
+[0;32mI (488956) BTN_HDL: Button GPIO 5 pressed[0m
+[0;32mI (489026) MAIN: Button DOWN - Released[0m
+[0;32mI (489026) BTN_HDL: Button GPIO 5 released[0m
+[0;32mI (489426) MAIN: Button DOWN - Single press detected[0m
+[0;32mI (489426) PWM_MGR: Start fading to brightness: 5% (current: 6%)[0m
+[0;32mI (489426) LED_CTRL: Decrease brightness: 5%[0m
+[0;32mI (489426) BTN_HDL: Button GPIO 5 pressed[0m
+[0;32mI (489446) MAIN: LED Status - On: YES, Brightness: 5%, Fading: NO[0m
+[0;32mI (489506) MAIN: Button DOWN - Released[0m
+[0;32mI (489506) BTN_HDL: Button GPIO 5 released[0m
+[0;32mI (489626) MAIN: Button DOWN - Single press detected[0m
+[0;32mI (489626) PWM_MGR: Start fading to brightness: 4% (current: 5%)[0m
+[0;32mI (489626) LED_CTRL: Decrease brightness: 4%[0m
+[0;32mI (489626) BTN_HDL: Button GPIO 5 pressed[0m
+[0;32mI (489706) MAIN: Button DOWN - Released[0m
+[0;32mI (489706) BTN_HDL: Button GPIO 5 released[0m
+[0;32mI (489796) MAIN: Button DOWN - Single press detected[0m
+[0;32mI (489796) PWM_MGR: Start fading to brightness: 3% (current: 4%)[0m
+[0;32mI (489796) LED_CTRL: Decrease brightness: 3%[0m
+[0;32mI (489796) BTN_HDL: Button GPIO 5 pressed[0m
+[0;32mI (489876) MAIN: Button DOWN - Released[0m
+[0;32mI (489876) BTN_HDL: Button GPIO 5 released[0m
+[0;32mI (489976) MAIN: Button DOWN - Single press detected[0m
+[0;32mI (489976) PWM_MGR: Start fading to brightness: 2% (current: 3%)[0m
+[0;32mI (489976) LED_CTRL: Decrease brightness: 2%[0m
+[0;32mI (489976) BTN_HDL: Button GPIO 5 pressed[0m
+[0;32mI (490056) MAIN: Button DOWN - Released[0m
+[0;32mI (490056) BTN_HDL: Button GPIO 5 released[0m
+[0;32mI (490266) MAIN: Button DOWN - Single press detected[0m
+[0;32mI (490266) PWM_MGR: Start fading to brightness: 1% (current: 2%)[0m
+[0;32mI (490266) LED_CTRL: Decrease brightness: 1%[0m
+[0;32mI (490266) BTN_HDL: Button GPIO 5 pressed[0m
+[0;32mI (490316) MAIN: Button DOWN - Released[0m
+[0;32mI (490316) BTN_HDL: Button GPIO 5 released[0m
+[0;32mI (490416) MAIN: Button DOWN - Single press detected[0m
+[0;32mI (490416) PWM_MGR: Start fading to brightness: 0% (current: 1%)[0m
+[0;32mI (490416) LED_CTRL: Decrease brightness: 0%[0m
+[0;32mI (490416) BTN_HDL: Button GPIO 5 pressed[0m
+[0;32mI (490446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (490456) MAIN: Button DOWN - Released[0m
+[0;32mI (490456) BTN_HDL: Button GPIO 5 released[0m
+[0;32mI (490576) MAIN: Button DOWN - Single press detected[0m
+[0;32mI (490576) BTN_HDL: Button GPIO 5 pressed[0m
+[0;32mI (490676) MAIN: Button DOWN - Released[0m
+[0;32mI (490676) BTN_HDL: Button GPIO 5 released[0m
+[0;32mI (490806) MAIN: Button DOWN - Single press detected[0m
+[0;32mI (490806) BTN_HDL: Button GPIO 5 pressed[0m
+[0;32mI (491176) MAIN: Button DOWN - Released[0m
+[0;32mI (491176) BTN_HDL: Button GPIO 5 released[0m
+[0;32mI (491346) MAIN: Button DOWN - Single press detected[0m
+[0;32mI (491346) BTN_HDL: Button GPIO 5 pressed[0m
+[0;32mI (491446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (491636) MAIN: Button DOWN - Released[0m
+[0;32mI (491636) BTN_HDL: Button GPIO 5 released[0m
+[0;32mI (491866) MAIN: Button DOWN - Single press detected[0m
+[0;32mI (491866) BTN_HDL: Button GPIO 5 pressed[0m
+[0;32mI (492366) MAIN: Button DOWN - Long press (continuous decrease)[0m
+[0;32mI (492366) BTN_HDL: Button GPIO 5 long press triggered[0m
+[0;32mI (492396) MAIN: Button DOWN - Released[0m
+[0;32mI (492396) BTN_HDL: Button GPIO 5 released[0m
+[0;32mI (492446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (492626) MAIN: Button DOWN - Single press detected[0m
+[0;32mI (492626) BTN_HDL: Button GPIO 5 pressed[0m
+[0;32mI (492706) MAIN: Button DOWN - Released[0m
+[0;32mI (492706) BTN_HDL: Button GPIO 5 released[0m
+[0;32mI (493446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (494446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (495446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (496446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (497446) MAIN: LED Status - On: NO, Brightness: 0%, Fading: NO[0m
+[0;32mI (497626) MAIN: Button UP - Single press detected[0m
+[0;32mI (497626) PWM_MGR: Start fading to brightness: 1% (current: 0%)[0m
+[0;32mI (497626) LED_CTRL: Increase brightness: 1%[0m
+[0;32mI (497626) BTN_HDL: Button GPIO 4 pressed[0m
+[0;32mI (497766) MAIN: Button UP - Released[0m
+[0;32mI (497766) BTN_HDL: Button GPIO 4 released[0m
+[0;32mI (497996) MAIN: Button UP - Single press detected[0m
+[0;32mI (497996) PWM_MGR: Start fading to brightness: 2% (current: 1%)[0m
+[0;32mI (497996) LED_CTRL: Increase brightness: 2%[0m
+[0;32mI (497996) BTN_HDL: Button GPIO 4 pressed[0m
+[0;32mI (498066) MAIN: Button UP - Released[0m
+[0;32mI (498066) BTN_HDL: Button GPIO 4 released[0m
+[0;32mI (498416) MAIN: Button UP - Single press detected[0m
+[0;32mI (498416) PWM_MGR: Start fading to brightness: 3% (current: 2%)[0m
+[0;32mI (498416) LED_CTRL: Increase brightness: 3%[0m
+[0;32mI (498416) BTN_HDL: Button GPIO 4 pressed[0m
+[0;32mI (498446) MAIN: LED Status - On: YES, Brightness: 3%, Fading: NO[0m
+[0;32mI (498496) MAIN: Button UP - Released[0m
+[0;32mI (498496) BTN_HDL: Button GPIO 4 released[0m
+[0;32mI (498646) MAIN: Button UP - Single press detected[0m
+[0;32mI (498646) PWM_MGR: Start fading to brightness: 4% (current: 3%)[0m
+[0;32mI (498646) LED_CTRL: Increase brightness: 4%[0m
+[0;32mI (498646) BTN_HDL: Button GPIO 4 pressed[0m
+[0;32mI (498726) MAIN: Button UP - Released[0m
+[0;32mI (498726) BTN_HDL: Button GPIO 4 released[0m
+[0;32mI (498836) MAIN: Button UP - Single press detected[0m
+[0;32mI (498836) PWM_MGR: Start fading to brightness: 5% (current: 4%)[0m
+[0;32mI (498836) LED_CTRL: Increase brightness: 5%[0m
+[0;32mI (498836) BTN_HDL: Button GPIO 4 pressed[0m
+[0;32mI (498886) MAIN: Button UP - Released[0m
+[0;32mI (498886) BTN_HDL: Button GPIO 4 released[0m
+[0;32mI (499276) MAIN: Button UP - Single press detected[0m
+[0;32mI (499276) PWM_MGR: Start fading to brightness: 6% (current: 5%)[0m
+[0;32mI (499276) LED_CTRL: Increase brightness: 6%[0m
+[0;32mI (499276) BTN_HDL: Button GPIO 4 pressed[0m
+[0;32mI (499356) MAIN: Button UP - Released[0m
+[0;32mI (499356) BTN_HDL: Button GPIO 4 released[0m
+[0;32mI (499446) MAIN: LED Status - On: YES, Brightness: 6%, Fading: NO[0m
+[0;32mI (499466) MAIN: Button UP - Single press detected[0m
+[0;32mI (499466) PWM_MGR: Start fading to brightness: 7% (current: 6%)[0m
+[0;32mI (499466) LED_CTRL: Increase brightness: 7%[0m
+[0;32mI (499466) BTN_HDL: Button GPIO 4 pressed[0m
+[0;32mI (499966) MAIN: Button UP - Long press (continuous increase)[0m
+[0;32mI (499966) PWM_MGR: Start fading to brightness: 8% (current: 7%)[0m
+[0;32mI (499966) LED_CTRL: Increase brightness: 8%[0m
+[0;32mI (499966) BTN_HDL: Button GPIO 4 long press triggered[0m
+[0;32mI (500446) MAIN: LED Status - On: YES, Brightness: 8%, Fading: NO[0m
+[0;32mI (501446) MAIN: LED Status - On: YES, Brightness: 8%, Fading: NO[0m
+[0;32mI (501786) MAIN: Button UP - Released[0m
+[0;32mI (501786) BTN_HDL: Button GPIO 4 released[0m
+[0;32mI (502026) MAIN: Button UP - Single press detected[0m
+[0;32mI (502026) PWM_MGR: Start fading to brightness: 9% (current: 8%)[0m
+[0;32mI (502026) LED_CTRL: Increase brightness: 9%[0m
+[0;32mI (502026) BTN_HDL: Button GPIO 4 pressed[0m
+[0;32mI (502066) MAIN: Button UP - Released[0m
+[0;32mI (502066) BTN_HDL: Button GPIO 4 released[0m
+[0;32mI (502226) MAIN: Button UP - Single press detected[0m
+[0;32mI (502226) PWM_MGR: Start fading to brightness: 10% (current: 9%)[0m
+[0;32mI (502226) LED_CTRL: Increase brightness: 10%[0m
+[0;32mI (502226) BTN_HDL: Button GPIO 4 pressed[0m
+[0;32mI (502276) MAIN: Button UP - Released[0m
+[0;32mI (502276) BTN_HDL: Button GPIO 4 released[0m
+[0;32mI (502396) MAIN: Button UP - Single press detected[0m
+[0;32mI (502396) PWM_MGR: Start fading to brightness: 11% (current: 10%)[0m
+[0;32mI (502396) LED_CTRL: Increase brightness: 11%[0m
+[0;32mI (502396) BTN_HDL: Button GPIO 4 pressed[0m
+[0;32mI (502446) MAIN: LED Status - On: YES, Brightness: 11%, Fading: NO[0m
+[0;32mI (502466) MAIN: Button UP - Released[0m
+[0;32mI (502466) BTN_HDL: Button GPIO 4 released[0m
+[0;32mI (502596) MAIN: Button UP - Single press detected[0m
+[0;32mI (502596) PWM_MGR: Start fading to brightness: 12% (current: 11%)[0m
+[0;32mI (502596) LED_CTRL: Increase brightness: 12%[0m
+[0;32mI (502596) BTN_HDL: Button GPIO 4 pressed[0m
+[0;32mI (502686) MAIN: Button UP - Released[0m
+[0;32mI (502686) BTN_HDL: Button GPIO 4 released[0m
+[0;32mI (502986) MAIN: Button UP - Single press detected[0m
+[0;32mI (502986) PWM_MGR: Start fading to brightness: 13% (current: 12%)[0m
+[0;32mI (502986) LED_CTRL: Increase brightness: 13%[0m
+[0;32mI (502986) BTN_HDL: Button GPIO 4 pressed[0m
+[0;32mI (503446) MAIN: LED Status - On: YES, Brightness: 13%, Fading: NO[0m
+[0;32mI (503486) MAIN: Button UP - Long press (continuous increase)[0m
+[0;32mI (503486) PWM_MGR: Start fading to brightness: 14% (current: 13%)[0m
+[0;32mI (503486) LED_CTRL: Increase brightness: 14%[0m
+[0;32mI (503486) BTN_HDL: Button GPIO 4 long press triggered[0m
+[0;32mI (504446) MAIN: LED Status - On: YES, Brightness: 14%, Fading: NO[0m
+[0;32mI (505446) MAIN: LED Status - On: YES, Brightness: 14%, Fading: NO[0m
+[0;32mI (506446) MAIN: LED Status - On: YES, Brightness: 14%, Fading: NO[0m
+[0;32mI (507446) MAIN: LED Status - On: YES, Brightness: 14%, Fading: NO[0m
+[0;32mI (508446) MAIN: LED Status - On: YES, Brightness: 14%, Fading: NO[0m
+[0;32mI (509446) MAIN: LED Status - On: YES, Brightness: 14%, Fading: NO[0m
+[0;32mI (509506) MAIN: Button UP - Released[0m
+[0;32mI (509506) BTN_HDL: Button GPIO 4 released[0m
+[0;32mI (509626) MAIN: Button UP - Single press detected[0m
+[0;32mI (509626) PWM_MGR: Start fading to brightness: 15% (current: 14%)[0m
+[0;32mI (509626) LED_CTRL: Increase brightness: 15%[0m
+[0;32mI (509626) BTN_HDL: Button GPIO 4 pressed[0m
+[0;32mI (510136) MAIN: Button UP - Long press (continuous increase)[0m
+[0;32mI (510136) PWM_MGR: Start fading to brightness: 16% (current: 15%)[0m
+[0;32mI (510136) LED_CTRL: Increase brightness: 16%[0m
+[0;32mI (510136) BTN_HDL: Button GPIO 4 long press triggered[0m
+[0;32mI (510186) MAIN: Button UP - Released[0m
+[0;32mI (510186) BTN_HDL: Button GPIO 4 released[0m
+[0;32mI (510366) MAIN: Button UP - Single press detected[0m
+[0;32mI (510366) PWM_MGR: Start fading to brightness: 17% (current: 16%)[0m
+[0;32mI (510366) LED_CTRL: Increase brightness: 17%[0m
+[0;32mI (510366) BTN_HDL: Button GPIO 4 pressed[0m
+[0;32mI (510446) MAIN: LED Status - On: YES, Brightness: 17%, Fading: NO[0m
+[0;32mI (510576) MAIN: Button UP - Released[0m
+[0;32mI (510576) BTN_HDL: Button GPIO 4 released[0m
+[0;32mI (510836) MAIN: Button UP - Single press detected[0m
+[0;32mI (510836) PWM_MGR: Start fading to brightness: 18% (current: 17%)[0m
+[0;32mI (510836) LED_CTRL: Increase brightness: 18%[0m
+[0;32mI (510836) BTN_HDL: Button GPIO 4 pressed[0m
+[0;32mI (510916) MAIN: Button UP - Released[0m
+[0;32mI (510916) BTN_HDL: Button GPIO 4 released[0m
+[0;32mI (511326) MAIN: Button UP - Single press detected[0m
+[0;32mI (511326) PWM_MGR: Start fading to brightness: 19% (current: 18%)[0m
+[0;32mI (511326) LED_CTRL: Increase brightness: 19%[0m
+[0;32mI (511326) BTN_HDL: Button GPIO 4 pressed[0m
+[0;32mI (511436) MAIN: Button UP - Released[0m
+[0;32mI (511436) BTN_HDL: Button GPIO 4 released[0m
+[0;32mI (511446) MAIN: LED Status - On: YES, Brightness: 19%, Fading: NO[0m
+[0;32mI (511566) MAIN: Button UP - Single press detected[0m
+[0;32mI (511566) PWM_MGR: Start fading to brightness: 20% (current: 19%)[0m
+[0;32mI (511566) LED_CTRL: Increase brightness: 20%[0m
+[0;32mI (511566) BTN_HDL: Button GPIO 4 pressed[0m
+[0;32mI (511646) MAIN: Button UP - Released[0m
+[0;32mI (511646) BTN_HDL: Button GPIO 4 released[0m
+[0;32mI (511756) MAIN: Button UP - Single press detected[0m
+[0;32mI (511756) PWM_MGR: Start fading to brightness: 21% (current: 20%)[0m
+[0;32mI (511756) LED_CTRL: Increase brightness: 21%[0m
+[0;32mI (511756) BTN_HDL: Button GPIO 4 pressed[0m
+[0;32mI (511816) MAIN: Button UP - Released[0m
+[0;32mI (511816) BTN_HDL: Button GPIO 4 released[0m
+[0;32mI (511936) MAIN: Button UP - Single press detected[0m
+[0;32mI (511936) PWM_MGR: Start fading to brightness: 22% (current: 21%)[0m
+[0;32mI (511936) LED_CTRL: Increase brightness: 22%[0m
+[0;32mI (511936) BTN_HDL: Button GPIO 4 pressed[0m
+[0;32mI (511996) MAIN: Button UP - Released[0m
+[0;32mI (511996) BTN_HDL: Button GPIO 4 released[0m
+[0;32mI (512106) MAIN: Button UP - Single press detected[0m
+[0;32mI (512106) PWM_MGR: Start fading to brightness: 23% (current: 22%)[0m
+[0;32mI (512106) LED_CTRL: Increase brightness: 23%[0m
+[0;32mI (512106) BTN_HDL: Button GPIO 4 pressed[0m
+[0;32mI (512406) MAIN: Button UP - Released[0m
+[0;32mI (512406) BTN_HDL: Button GPIO 4 released[0m
+[0;32mI (512446) MAIN: LED Status - On: YES, Brightness: 23%, Fading: NO[0m
+[0;32mI (513446) MAIN: LED Status - On: YES, Brightness: 23%, Fading: NO[0m
+[0;32mI (513806) MAIN: Button UP - Single press detected[0m
+[0;32mI (513806) PWM_MGR: Start fading to brightness: 24% (current: 23%)[0m
+[0;32mI (513806) LED_CTRL: Increase brightness: 24%[0m
+[0;32mI (513806) BTN_HDL: Button GPIO 4 pressed[0m
+[0;32mI (514006) MAIN: Button UP - Released[0m
+[0;32mI (514006) BTN_HDL: Button GPIO 4 released[0m
+[0;32mI (514266) MAIN: Button UP - Single press detected[0m
+[0;32mI (514266) PWM_MGR: Start fading to brightness: 25% (current: 24%)[0m
+[0;32mI (514266) LED_CTRL: Increase brightness: 25%[0m
+[0;32mI (514266) BTN_HDL: Button GPIO 4 pressed[0m
+[0;32mI (514446) MAIN: LED Status - On: YES, Brightness: 25%, Fading: NO[0m
+[0;32mI (514486) MAIN: Button UP - Released[0m
+[0;32mI (514486) BTN_HDL: Button GPIO 4 released[0m
+[0;32mI (514686) MAIN: Button UP - Single press detected[0m
+[0;32mI (514686) PWM_MGR: Start fading to brightness: 26% (current: 25%)[0m
+[0;32mI (514686) LED_CTRL: Increase brightness: 26%[0m
+[0;32mI (514686) BTN_HDL: Button GPIO 4 pressed[0m
+[0;32mI (515066) MAIN: Button UP - Released[0m
+[0;32mI (515066) BTN_HDL: Button GPIO 4 released[0m
+[0;32mI (515316) MAIN: Button UP - Single press detected[0m
+[0;32mI (515316) PWM_MGR: Start fading to brightness: 27% (current: 26%)[0m
+[0;32mI (515316) LED_CTRL: Increase brightness: 27%[0m
+[0;32mI (515316) BTN_HDL: Button GPIO 4 pressed[0m
+[0;32mI (515336) MAIN: Button UP - Released[0m
+[0;32mI (515336) BTN_HDL: Button GPIO 4 released[0m
+[0;32mI (515446) MAIN: LED Status - On: YES, Brightness: 27%, Fading: NO[0m
+[0;32mI (515836) MAIN: Button UP - Single press detected[0m
+[0;32mI (515836) PWM_MGR: Start fading to brightness: 28% (current: 27%)[0m
+[0;32mI (515836) LED_CTRL: Increase brightness: 28%[0m
+[0;32mI (515836) BTN_HDL: Button GPIO 4 pressed[0m
+[0;32mI (516136) MAIN: Button UP - Released[0m
+[0;32mI (516136) BTN_HDL: Button GPIO 4 released[0m
+[0;32mI (516376) MAIN: Button UP - Single press detected[0m
+[0;32mI (516376) PWM_MGR: Start fading to brightness: 29% (current: 28%)[0m
+[0;32mI (516376) LED_CTRL: Increase brightness: 29%[0m
+[0;32mI (516376) BTN_HDL: Button GPIO 4 pressed[0m
+[0;32mI (516446) MAIN: LED Status - On: YES, Brightness: 29%, Fading: NO[0m
+[0;32mI (516876) MAIN: Button UP - Long press (continuous increase)[0m
+[0;32mI (516876) PWM_MGR: Start fading to brightness: 30% (current: 29%)[0m
+[0;32mI (516876) LED_CTRL: Increase brightness: 30%[0m
+[0;32mI (516876) BTN_HDL: Button GPIO 4 long press triggered[0m
+[0;32mI (517446) MAIN: LED Status - On: YES, Brightness: 30%, Fading: NO[0m
+[0;32mI (517646) MAIN: Button UP - Released[0m
+[0;32mI (517646) BTN_HDL: Button GPIO 4 released[0m
+[0;32mI (518446) MAIN: LED Status - On: YES, Brightness: 30%, Fading: NO[0m
+[0;32mI (519446) MAIN: LED Status - On: YES, Brightness: 30%, Fading: NO[0m
+[0;32mI (520446) MAIN: LED Status - On: YES, Brightness: 30%, Fading: NO[0m
+[0;32mI (521446) MAIN: LED Status - On: YES, Brightness: 30%, Fading: NO[0m
+[0;32mI (522446) MAIN: LED Status - On: YES, Brightness: 30%, Fading: NO[0m
+[0;32mI (523446) MAIN: LED Status - On: YES, Brightness: 30%, Fading: NO[0m
+[0;32mI (524446) MAIN: LED Status - On: YES, Brightness: 30%, Fading: NO[0m
+[0;32mI (525446) MAIN: LED Status - On: YES, Brightness: 30%, Fading: NO[0m
+[0;32mI (526446) MAIN: LED Status - On: YES, Brightness: 30%, Fading: NO[0m
+[0;32mI (527446) MAIN: LED Status - On: YES, Brightness: 30%, Fading: NO[0m
+[0;32mI (528446) MAIN: LED Status - On: YES, Brightness: 30%, Fading: NO[0m
+[0;32mI (529446) MAIN: LED Status - On: YES, Brightness: 30%, Fading: NO[0m
+[0;32mI (530446) MAIN: LED Status - On: YES, Brightness: 30%, Fading: NO[0m
+[0;32mI (531446) MAIN: LED Status - On: YES, Brightness: 30%, Fading: NO[0m
+[0;32mI (532446) MAIN: LED Status - On: YES, Brightness: 30%, Fading: NO[0m
+[0;32mI (533446) MAIN: LED Status - On: YES, Brightness: 30%, Fading: NO[0m
+[0;32mI (534446) MAIN: LED Status - On: YES, Brightness: 30%, Fading: NO[0m
+[0;32mI (535446) MAIN: LED Status - On: YES, Brightness: 30%, Fading: NO[0m
+[0;32mI (536446) MAIN: LED Status - On: YES, Brightness: 30%, Fading: NO[0m
+[0;32mI (537446) MAIN: LED Status - On: YES, Brightness: 30%, Fading: NO[0m
+[0;32mI (538446) MAIN: LED Status - On: YES, Brightness: 30%, Fading: NO[0m
+[0;32mI (539446) MAIN: LED Status - On: YES, Brightness: 30%, Fading: NO[0m
+[0;32mI (540446) MAIN: LED Status - On: YES, Brightness: 30%, Fading: NO[0m
+[0;32mI (541446) MAIN: LED Status - On: YES, Brightness: 30%, Fading: NO[0m
+[0;32mI (542446) MAIN: LED Status - On: YES, Brightness: 30%, Fading: NO[0m
+[0;32mI (543446) MAIN: LED Status - On: YES, Brightness: 30%, Fading: NO[0m
+[0;32mI (544446) MAIN: LED Status - On: YES, Brightness: 30%, Fading: NO[0m
+[0;32mI (545446) MAIN: LED Status - On: YES, Brightness: 30%, Fading: NO[0m
+[0;32mI (546446) MAIN: LED Status - On: YES, Brightness: 30%, Fading: NO[0m
+[0;32mI (547446) MAIN: LED Status - On: YES, Brightness: 30%, Fading: NO[0m
+[0;32mI (548446) MAIN: LED Status - On: YES, Brightness: 30%, Fading: NO[0m
+[0;32mI (549446) MAIN: LED Status - On: YES, Brightness: 30%, Fading: NO[0m
+[0;32mI (550446) MAIN: LED Status - On: YES, Brightness: 30%, Fading: NO[0m
+[0;32mI (551446) MAIN: LED Status - On: YES, Brightness: 30%, Fading: NO[0m
+[0;32mI (552446) MAIN: LED Status - On: YES, Brightness: 30%, Fading: NO[0m
+[0;32mI (553446) MAIN: LED Status - On: YES, Brightness: 30%, Fading: NO[0m
+[0;32mI (554446) MAIN: LED Status - On: YES, Brightness: 30%, Fading: NO[0m
+[0;32mI (555446) MAIN: LED Status - On: YES, Brightness: 30%, Fading: NO[0m
+[0;32mI (556446) MAIN: LED Status - On: YES, Brightness: 30%, Fading: NO[0m
+[0;32mI (557446) MAIN: LED Status - On: YES, Brightness: 30%, Fading: NO[0m
+[0;32mI (558446) MAIN: LED Status - On: YES, Brightness: 30%, Fading: NO[0m
+[0;32mI (559446) MAIN: LED Status - On: YES, Brightness: 30%, Fading: NO[0m
+[0;32mI (560446) MAIN: LED Status - On: YES, Brightness: 30%, Fading: NO[0m
+[0;32mI (561446) MAIN: LED Status - On: YES, Brightness: 30%, Fading: NO[0m
+[0;32mI (562446) MAIN: LED Status - On: YES, Brightness: 30%, Fading: NO[0m
+[0;32mI (563446) MAIN: LED Status - On: YES, Brightness: 30%, Fading: NO[0m
+[0;32mI (564446) MAIN: LED Status - On: YES, Brightness: 30%, Fading: NO[0m
+[0;32mI (565446) MAIN: LED Status - On: YES, Brightness: 30%, Fading: NO[0m
+[0;32mI (566446) MAIN: LED Status - On: YES, Brightness: 30%, Fading: NO[0m
+[0;32mI (567446) MAIN: LED Status - On: YES, Brightness: 30%, Fading: NO[0m
+[0;32mI (568446) MAIN: LED Status - On: YES, Brightness: 30%, Fading: NO[0m
+[0;32mI (569446) MAIN: LED Status - On: YES, Brightness: 30%, Fading: NO[0m
+[0;32mI (570446) MAIN: LED Status - On: YES, Brightness: 30%, Fading: NO[0m
+[0;32mI (571446) MAIN: LED Status - On: YES, Brightness: 30%, Fading: NO[0m
+[0;32mI (572446) MAIN: LED Status - On: YES, Brightness: 30%, Fading: NO[0m
+[0;32mI (573446) MAIN: LED Status - On: YES, Brightness: 30%, Fading: NO[0m
+[0;32mI (574446) MAIN: LED Status - On: YES, Brightness: 30%, Fading: NO[0m
+[0;32mI (575446) MAIN: LED Status - On: YES, Brightness: 30%, Fading: NO[0m
+[0;32mI (576446) MAIN: LED Status - On: YES, Brightness: 30%, Fading: NO[0m
+[0;32mI (577446) MAIN: LED Status - On: YES, Brightness: 30%, Fading: NO[0m
+[0;32mI (578446) MAIN: LED Status - On: YES, Brightness: 30%, Fading: NO[0m
+[0;32mI (579446) MAIN: LED Status - On: YES, Brightness: 30%, Fading: NO[0m
+[0;32mI (580446) MAIN: LED Status - On: YES, Brightness: 30%, Fading: NO[0m
+[0;32mI (581446) MAIN: LED Status - On: YES, Brightness: 30%, Fading: NO[0m
+[0;32mI (582446) MAIN: LED Status - On: YES, Brightness: 30%, Fading: NO[0m
+[0;32mI (583446) MAIN: LED Status - On: YES, Brightness: 30%, Fading: NO[0m
+[0;32mI (584446) MAIN: LED Status - On: YES, Brightness: 30%, Fading: NO[0m
+[0;32mI (585446) MAIN: LED Status - On: YES, Brightness: 30%, Fading: NO[0m
+[0;32mI (586446) MAIN: LED Status - On: YES, Brightness: 30%, Fading: NO[0m
+[0;32mI (587446) MAIN: LED Status - On: YES, Brightness: 30%, Fading: NO[0m
+[0;32mI (588446) MAIN: LED Status - On: YES, Brightness: 30%, Fading: NO[0m
+[0;32mI (589446) MAIN: LED Status - On: YES, Brightness: 30%, Fading: NO[0m
+[0;32mI (590446) MAIN: LED Status - On: YES, Brightness: 30%, Fading: NO[0m
+[0;32mI (591446) MAIN: LED Status - On: YES, Brightness: 30%, Fading: NO[0m
+[0;32mI (592446) MAIN: LED Status - On: YES, Brightness: 30%, Fading: NO[0m
+[0;32mI (593446) MAIN: LED Status - On: YES, Brightness: 30%, Fading: NO[0m
+[0;32mI (594446) MAIN: LED Status - On: YES, Brightness: 30%, Fading: NO[0m
+[0;32mI (595446) MAIN: LED Status - On: YES, Brightness: 30%, Fading: NO[0m
+[0;32mI (596446) MAIN: LED Status - On: YES, Brightness: 30%, Fading: NO[0m
+[0;32mI (597446) MAIN: LED Status - On: YES, Brightness: 30%, Fading: NO[0m
+[0;32mI (598446) MAIN: LED Status - On: YES, Brightness: 30%, Fading: NO[0m
+[0;32mI (599446) MAIN: LED Status - On: YES, Brightness: 30%, Fading: NO[0m
+[0;32mI (600446) MAIN: LED Status - On: YES, Brightness: 30%, Fading: NO[0m
+[0;32mI (601446) MAIN: LED Status - On: YES, Brightness: 30%, Fading: NO[0m
+[0;32mI (602446) MAIN: LED Status - On: YES, Brightness: 30%, Fading: NO[0m
+[0;32mI (603446) MAIN: LED Status - On: YES, Brightness: 30%, Fading: NO[0m
+[0;32mI (604446) MAIN: LED Status - On: YES, Brightness: 30%, Fading: NO[0m
+[0;32mI (605446) MAIN: LED Status - On: YES, Brightness: 30%, Fading: NO[0m
+[0;32mI (606446) MAIN: LED Status - On: YES, Brightness: 30%, Fading: NO[0m
+[0;32mI (607446) MAIN: LED Status - On: YES, Brightness: 30%, Fading: NO[0m
+[0;32mI (608446) MAIN: LED Status - On: YES, Brightness: 30%, Fading: NO[0m
+[0;32mI (609446) MAIN: LED Status - On: YES, Brightness: 30%, Fading: NO[0m
+[0;32mI (610446) MAIN: LED Status - On: YES, Brightness: 30%, Fading: NO[0m
+[0;32mI (611446) MAIN: LED Status - On: YES, Brightness: 30%, Fading: NO[0m

@@ -1,0 +1,2 @@
+source C:/Espressif/frameworks/esp-idf-v5.3.3/examples/get-started/esp32c3_led_controller/esp32c3_led_controller/build/bootloader/gdbinit/symbols
+source C:/Espressif/frameworks/esp-idf-v5.3.3/examples/get-started/esp32c3_led_controller/esp32c3_led_controller/build/bootloader/gdbinit/connect

@@ -1,0 +1,13 @@
+idf_component_register(
+    SRCS 
+        "main.c"
+        "led_controller.c"
+        "button_handler.c"
+        "uart_protocol.c"
+        "pwm_manager.c"
+    INCLUDE_DIRS 
+        "."
+    REQUIRES 
+        "driver"
+        "esp_timer"
+)
